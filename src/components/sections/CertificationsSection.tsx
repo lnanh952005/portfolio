@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Award, Cloud, Code, Trophy, ExternalLink } from 'lucide-react'
+import { Award, Cloud, Code, Trophy } from 'lucide-react'
 import { SectionHeader } from '../ui/SectionHeader'
 import { certificationsData } from '../../data/portfolioData'
 
@@ -59,17 +59,6 @@ export const CertificationsSection: React.FC = () => {
 
               <div className="mt-6 pt-3 border-t border-zinc-100 dark:border-zinc-800 flex items-center justify-between text-xs text-neutral-400 dark:text-zinc-400">
                 <span>{cert.date}</span>
-                {cert.credentialUrl && cert.credentialUrl !== '#' && (
-                  <a
-                    href={cert.credentialUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors"
-                  >
-                    <span>Xác minh</span>
-                    <ExternalLink className="h-3 w-3" />
-                  </a>
-                )}
               </div>
             </div>
           </motion.div>

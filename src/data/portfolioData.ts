@@ -269,13 +269,4 @@ export const certificationsData: Certification[] = [
     credentialUrl: 'https://www.ctu.edu.vn',
     icon: 'Cloud'
   },
-  {
-    id: 'cert-3',
-    title: 'Năng lực Lập trình & Giải thuật',
-    issuer: 'Bộ môn Khoa học Máy tính — ĐH Cần Thơ',
-    date: '2023 — 2024',
-    badgeText: 'Hoàn thành',
-    credentialUrl: '#',
-    icon: 'Code'
-  }
 ]
