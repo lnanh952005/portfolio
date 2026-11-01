@@ -23,6 +23,8 @@ export const SkillsSection: React.FC = () => {
         return <Server className="h-4 w-4 text-blue-600 dark:text-blue-400" />
       case 'Database':
         return <Database className="h-4 w-4 text-blue-600 dark:text-blue-400" />
+      case 'Sparkles':
+        return <Sparkles className="h-4 w-4 text-blue-600 dark:text-blue-400" />
       case 'Wrench':
       default:
         return <Wrench className="h-4 w-4 text-blue-600 dark:text-blue-400" />

@@ -5,55 +5,22 @@ import { Modal } from '../ui/Modal'
 import { GithubIcon } from '../ui/Icons'
 import { SectionHeader } from '../ui/SectionHeader'
 import { projectsData } from '../../data/portfolioData'
-import type { Project, RoleCategory } from '../../types/portfolio'
+import type { Project } from '../../types/portfolio'
 
 export const ProjectsSection: React.FC = () => {
-  const [filter, setFilter] = useState<RoleCategory>('all')
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
 
-  const filteredProjects = projectsData.filter((project) => {
-    if (filter === 'all') return true
-    return project.category === filter
-  })
-
   // Large featured project vs secondary projects
-  const featuredProject = filteredProjects.find((p) => p.featured) || filteredProjects[0]
-  const otherProjects = filteredProjects.filter((p) => p.id !== featuredProject?.id)
+  const featuredProject = projectsData.find((p) => p.featured) || projectsData[0]
+  const otherProjects = projectsData.filter((p) => p.id !== featuredProject?.id)
 
   return (
     <section id="projects" className="py-16 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-8 sm:mb-12">
-        <SectionHeader
-          badge="Dự án Tiêu biểu"
-          title="Kiến tạo với Mục đích Rõ ràng"
-          subtitle="Khám phá các nền tảng full-stack, công cụ lập trình viên và vi dịch vụ thông lượng cao được xây dựng trên nền tảng công nghệ hiện đại."
-          className="mb-0"
-        />
-
-        {/* Category Filters */}
-        <div className="mt-4 md:mt-0 flex flex-wrap items-center gap-1.5 p-1 rounded-2xl bg-zinc-100 dark:bg-zinc-800/80 border border-zinc-200/60 dark:border-zinc-700/60 w-fit">
-          {(
-            [
-              { key: 'all', label: 'Tất cả dự án' },
-              { key: 'fullstack', label: 'Full-Stack' },
-              { key: 'backend', label: 'Backend' },
-              { key: 'frontend', label: 'Frontend' }
-            ] as const
-          ).map((item) => (
-            <button
-              key={item.key}
-              onClick={() => setFilter(item.key)}
-              className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold transition-all duration-200 cursor-pointer ${
-                filter === item.key
-                  ? 'bg-white dark:bg-zinc-700 text-neutral-900 dark:text-zinc-100 shadow-2xs font-bold'
-                  : 'text-neutral-500 dark:text-zinc-400 hover:text-neutral-900 dark:hover:text-zinc-100'
-              }`}
-            >
-              {item.label}
-            </button>
-          ))}
-        </div>
-      </div>
+      <SectionHeader
+        badge="Dự án Tiêu biểu"
+        title="Kiến tạo với Mục đích Rõ ràng"
+        subtitle="Khám phá các nền tảng full-stack, công cụ lập trình viên và vi dịch vụ thông lượng cao được xây dựng trên nền tảng công nghệ hiện đại."
+      />
 
       {/* Bento Grid Projects Layout */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6">

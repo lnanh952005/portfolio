@@ -22,7 +22,7 @@ export const candidateData: CandidateInfo = {
     remotePreference: 'Tại văn phòng / Hybrid / Remote',
   },
   education: {
-    degree: 'Cử nhân Khoa học Máy tính',
+    degree: 'Kỹ sư Khoa học Máy tính',
     major: 'Khoa học Máy tính',
     institution: 'Đại học Cần Thơ',
     period: '2023 — 2027',
@@ -255,7 +255,7 @@ export const certificationsData: Certification[] = [
     id: 'cert-1',
     title: 'Chứng chỉ Tiếng Anh Quốc tế TOEIC 550',
     issuer: 'ETS (Educational Testing Service)',
-    date: 'Năm 2024',
+    date: 'Năm 2026',
     badgeText: 'Đã xác minh',
     credentialUrl: '#',
     icon: 'Award'
