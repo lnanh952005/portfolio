@@ -34,10 +34,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCvModal }) => {
           <BentoCard
             badge="👋 Xin chào"
             className="w-full justify-between"
-            footerLink={{
-              label: 'Xem các dự án của mình',
-              onClick: scrollToProjects,
-            }}
           >
             <div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-neutral-900 dark:text-white leading-[1.15]">
