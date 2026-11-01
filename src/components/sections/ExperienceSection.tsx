@@ -137,18 +137,18 @@ export const ExperienceSection: React.FC = () => {
                 {candidateData.education.institution} • {candidateData.education.degree}
               </h3>
               <p className="text-xs sm:text-sm text-neutral-600 dark:text-zinc-300 leading-relaxed font-normal">
-                Chương trình học tập trung vào hiệu năng hệ thống, mô hình đồng thời, thuật toán và kiến trúc phần mềm phân tán. Duy trì mức <strong className="text-neutral-900 dark:text-white">GPA {candidateData.education.gpa}</strong> qua tất cả các kỳ học.
+                Chương trình đào tạo tại {candidateData.education.institution} trang bị nền tảng giải thuật vững vàng, phát triển ứng dụng Web toàn diện và các mô hình Trí tuệ Nhân tạo thực tế (Thị giác máy tính & Xử lý ngôn ngữ tự nhiên).
               </p>
             </div>
 
             <div className="shrink-0 flex items-center gap-3">
               <div className="text-right hidden sm:block">
-                <span className="text-xs text-neutral-400 dark:text-zinc-400 block font-medium">Tốt nghiệp dự kiến</span>
-                <span className="text-sm font-bold text-neutral-800 dark:text-zinc-200">Mùa Hè 2026</span>
+                <span className="text-xs text-neutral-400 dark:text-zinc-400 block font-medium">Niên khóa</span>
+                <span className="text-sm font-bold text-neutral-800 dark:text-zinc-200">{candidateData.education.period}</span>
               </div>
               <div className="h-10 w-px bg-zinc-200 dark:bg-zinc-800 hidden sm:block"></div>
               <div className="px-4 py-2 rounded-2xl bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 shadow-2xs text-xs font-semibold text-neutral-800 dark:text-zinc-200">
-                Sẵn sàng làm việc full-time: <span className="text-blue-600 dark:text-blue-400 font-bold">Tháng 6 — Tháng 11/2025</span>
+                Trạng thái: <span className="text-blue-600 dark:text-blue-400 font-bold">{candidateData.status.label}</span>
               </div>
             </div>
           </div>

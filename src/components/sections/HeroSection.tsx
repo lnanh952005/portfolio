@@ -41,7 +41,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCvModal }) => {
           >
             <div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-neutral-900 dark:text-white leading-[1.15]">
-                Chào bạn, mình là <span className="text-neutral-900 dark:text-white">Alex</span>
+                Chào bạn, mình là <span className="text-neutral-900 dark:text-white">Nhật Anh</span>
                 <span className="text-blue-600">.</span>
               </h1>
 
@@ -50,7 +50,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCvModal }) => {
               </p>
 
               <p className="mt-4 text-sm sm:text-base text-neutral-600 dark:text-zinc-400 max-w-2xl leading-relaxed font-normal">
-                Một <span className="font-semibold text-neutral-900 dark:text-zinc-100">Kỹ sư Phần mềm</span> tương lai tập trung vào hệ thống backend bền bỉ, API an toàn kiểu dữ liệu và kiến trúc frontend hiện đại. Hiện đang tìm kiếm cơ hội thực tập kỹ sư phần mềm năm 2025/2026.
+                Sinh viên <span className="font-semibold text-neutral-900 dark:text-zinc-100">Khoa học Máy tính</span> tại Đại học Cần Thơ, đam mê phát triển Web hiện đại kết hợp các mô hình Trí tuệ Nhân tạo (Thị giác máy tính & Xử lý ngôn ngữ tự nhiên). Sẵn sàng cho cơ hội thực tập và làm việc thực tế.
               </p>
 
               {/* Action Buttons */}
@@ -112,7 +112,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCvModal }) => {
               </div>
 
               <h2 className="text-lg font-bold text-neutral-900 dark:text-zinc-100">{candidateData.name}</h2>
-              <p className="text-xs text-neutral-500 dark:text-zinc-400 mt-0.5">Sinh viên năm 3 Khoa học Máy tính</p>
+              <p className="text-xs text-neutral-500 dark:text-zinc-400 mt-0.5">{candidateData.education.institution}</p>
 
               {/* Status details */}
               <div className="mt-4 w-full bg-zinc-50 dark:bg-zinc-800/50 rounded-2xl p-3 border border-zinc-200/70 dark:border-zinc-800 text-left">
@@ -189,7 +189,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCvModal }) => {
             }}
           >
             <div className="grid grid-cols-2 gap-2 mt-2">
-              {['TypeScript', 'React 19', 'Next.js 15', 'Node.js', 'PostgreSQL', 'Docker'].map((tech) => (
+              {['Python', 'React 19', 'FastAPI', 'PyTorch / CV', 'NLP', 'PostgreSQL'].map((tech) => (
                 <div
                   key={tech}
                   className="flex items-center gap-2 text-xs font-medium text-neutral-800 dark:text-zinc-200"

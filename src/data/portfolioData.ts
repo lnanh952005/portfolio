@@ -1,154 +1,154 @@
 import type { CandidateInfo, Project, SkillCategory, Experience, Certification } from '../types/portfolio'
 
 export const candidateData: CandidateInfo = {
-  name: 'Alex Nguyễn',
-  headline: 'Kiến tạo trải nghiệm số qua từng dòng mã.',
-  targetRoles: ['Thực tập sinh Kỹ sư Phần mềm', 'Thực tập sinh Backend Developer', 'Thực tập sinh Frontend Developer'],
+  name: 'Lê Nhật Anh',
+  headline: 'Xây dựng sản phẩm Web hiện đại & ứng dụng Trí tuệ Nhân tạo vào thực tiễn.',
+  targetRoles: ['Thực tập sinh Kỹ sư Phần mềm', 'Kỹ sư Web / Backend (Python, Node.js)', 'Ứng dụng AI (Computer Vision & NLP)'],
   status: {
     available: true,
-    label: 'Sẵn sàng thực tập',
-    details: 'Sẵn sàng cho kỳ thực tập Hè & Thu 2025 / 2026 (Toàn thời gian hoặc Bán thời gian)',
+    label: 'Sẵn sàng làm việc / Thực tập',
+    details: 'Sẵn sàng cho vị trí Thực tập sinh / Junior Developer (Toàn thời gian hoặc Bán thời gian)',
   },
-  bio: "Xin chào, mình là Alex. Sinh viên năm 3 ngành Khoa học Máy tính với đam mê xây dựng các dịch vụ backend mở rộng linh hoạt, API an toàn kiểu dữ liệu (type-safe) và các ứng dụng frontend mượt mà, tiếp cận tối ưu. Đang tìm kiếm cơ hội thực tập để đóng góp và học hỏi trong các đội ngũ kỹ thuật tốc độ cao.",
+  bio: "Xin chào, mình là Lê Nhật Anh. Sinh viên ngành Khoa học Máy tính tại Đại học Cần Thơ. Đam mê xây dựng các hệ thống web tối ưu, API vững chắc và ứng dụng các giải pháp AI (Thị giác máy tính - Computer Vision, Xử lý ngôn ngữ tự nhiên - NLP) vào giải quyết bài toán thực tế.",
   longBio: [
-    "Mình là một lập trình viên phần mềm tương lai, hiện đang theo học chương trình Cử nhân Khoa học Máy tính. Hành trình của mình bắt đầu với lập trình thi đấu, nơi đã trui rèn tư duy giải thuật sâu sắc và sự thấu hiểu về hiệu năng hệ thống.",
-    "Hiện tại, mình phát triển cân bằng cả hai mảng: thiết kế các vi dịch vụ (microservices) bền vững với Node.js/Go và PostgreSQL, đồng thời chăm chút những giao diện người dùng tinh tế, tốc độ cao bằng React 19, TypeScript và các kiến trúc CSS hiện đại.",
-    "Bên ngoài giảng đường, mình chủ trì các buổi workshop kỹ thuật tại Google Developer Student Club của trường, hướng dẫn sinh viên khóa dưới môn Cấu trúc dữ liệu & Giải thuật, và tích cực đóng góp cho các công cụ mã nguồn mở."
+    "Mình hiện là sinh viên ngành Khoa học Máy tính tại Đại học Cần Thơ (niên khóa 2023 — 2027). Suốt quá trình học tập tại trường, mình luôn chủ động xây dựng nền tảng vững chắc về cấu trúc dữ liệu, giải thuật, mạng máy tính và kiến trúc phần mềm.",
+    "Về mảng kỹ thuật, mình có kinh nghiệm phát triển ứng dụng Web hoàn chỉnh (Frontend với React, TypeScript, Tailwind CSS; Backend với Python FastAPI/Flask, Node.js và hệ quản trị cơ sở dữ liệu PostgreSQL/MongoDB). Đồng thời, mình đặc biệt yêu thích và thực hành chuyên sâu mảng Trí tuệ Nhân tạo — bao gồm Thị giác máy tính (Computer Vision: xử lý ảnh, nhận diện đối tượng bằng OpenCV, PyTorch) và Xử lý ngôn ngữ tự nhiên (NLP: trích xuất thông tin, xử lý văn bản tiếng Việt).",
+    "Với chứng chỉ TOEIC 550, khả năng tự học và đọc hiểu tài liệu kỹ thuật tốt, mình luôn chú trọng viết code sạch (Clean Code), tối ưu hiệu năng và mong muốn đóng góp năng lực trong các môi trường kỹ thuật chuyên nghiệp."
   ],
   location: {
-    city: 'Hà Nội',
+    city: 'Cần Thơ',
     country: 'Việt Nam',
     timezone: 'GMT+7',
-    remotePreference: 'Hybrid / Tại văn phòng / Remote',
+    remotePreference: 'Tại văn phòng / Hybrid / Remote',
   },
   education: {
     degree: 'Cử nhân Khoa học Máy tính',
-    major: 'Kỹ thuật Phần mềm & Hệ thống Phân tán',
-    institution: 'Đại học Bách Khoa',
-    period: '2022 — 2026 (Dự kiến)',
-    gpa: '3.78 / 4.00 (Top 5%)',
-    status: 'Sinh viên năm 3',
+    major: 'Khoa học Máy tính',
+    institution: 'Đại học Cần Thơ',
+    period: '2023 — 2027',
+    gpa: 'Khá / Giỏi',
+    status: 'Sinh viên năm 4',
     relevantCourses: [
       'Cấu trúc dữ liệu & Giải thuật',
-      'Hệ điều hành',
-      'Hệ quản trị cơ sở dữ liệu',
-      'Mạng máy tính',
-      'Kiến trúc phần mềm',
-      'Hệ thống phân tán'
+      'Trí tuệ Nhân tạo & Học máy',
+      'Thị giác Máy tính (Computer Vision)',
+      'Xử lý Ngôn ngữ Tự nhiên (NLP)',
+      'Lập trình Web & Cơ sở dữ liệu',
+      'Hệ điều hành & Mạng máy tính'
     ],
     highlights: [
-      "Học bổng Danh dự Khuyến khích Học tập (4 kỳ liên tiếp)",
-      'Học bổng Nghiên cứu Khoa học dành cho sinh viên',
-      'Chung kết Hackathon Sinh viên Toàn quốc 2024'
+      'Chứng chỉ tiếng Anh quốc tế TOEIC 550',
+      'Định hướng chuyên sâu: Phát triển Web & Ứng dụng AI thực tiễn',
+      'Thực hiện các đồ án chuyên ngành về Thị giác máy tính và Xử lý ngôn ngữ tự nhiên'
     ]
   },
-  careerGoal: 'Gia nhập đội ngũ kỹ thuật với vai trò Thực tập sinh Kỹ sư Phần mềm, nơi mình có thể đóng góp vào các hệ thống phân tán thực tế (production), xây dựng giao diện vững chắc và đồng hành học hỏi cùng các chuyên gia dày dạn kinh nghiệm.',
+  careerGoal: 'Gia nhập đội ngũ kỹ thuật với vai trò Kỹ sư Phần mềm / Thực tập sinh, ứng dụng thế mạnh lập trình Web và các mô hình Trí tuệ Nhân tạo (Computer Vision, NLP) để cùng đội ngũ phát triển các sản phẩm công nghệ có giá trị thực tiễn cao.',
   currentlyLearning: {
-    topic: 'Hệ thống Phân tán & Mô hình đồng thời trong Go',
-    reason: 'Đào sâu hiểu biết về thuật toán đồng thuận (Raft), message queues và kiến trúc vi dịch vụ thông lượng cao.',
-    progress: 'Đang phát triển một In-memory Key-Value Store tích hợp WAL và đồng thuận Raft.'
+    topic: 'Tối ưu hóa mô hình Computer Vision & Triển khai LLM trên Web',
+    reason: 'Nâng cao khả năng tinh chỉnh mô hình và tích hợp inference AI vào dịch vụ web với độ trễ thấp.',
+    progress: 'Xây dựng web service xử lý ảnh thời gian thực kết hợp trợ lý văn bản thông minh.'
   },
   contacts: {
-    email: 'alex.nguyen.dev@example.com',
-    github: 'https://github.com',
-    linkedin: 'https://linkedin.com',
+    email: 'lnanh952005@gmail.com',
+    github: 'https://github.com/lnanh952005',
+    linkedin: 'https://www.linkedin.com/in/nhat-anh-le-a87532338',
     leetcode: 'https://leetcode.com',
     twitter: 'https://twitter.com'
   },
   stats: {
-    projectsCompleted: 12,
-    technologiesMastered: 18,
-    githubContributions: '650+ commits trong năm',
-    gpa: '3.78/4.0'
+    projectsCompleted: 8,
+    technologiesMastered: 16,
+    githubContributions: 'Thường xuyên đóng góp code',
+    gpa: 'Khá / Giỏi'
   }
 }
 
 export const projectsData: Project[] = [
   {
-    id: 'algorise',
-    title: 'Algorise — Nền tảng Mô phỏng Giải thuật & Chấm mã nguồn',
-    tagline: 'Công cụ trực quan hóa từng bước thuật toán đồ thị và môi trường sandbox thực thi code',
-    description: 'Nền tảng học tập full-stack giúp sinh viên CNTT nắm vững các thuật toán đồ thị phức tạp (Dijkstra, A*, BFS/DFS) và quy hoạch động thông qua hoạt ảnh tùy biến cùng sandbox WebAssembly cô lập.',
+    id: 'vision-ai-system',
+    title: 'VisionAI — Nền tảng Phân tích & Nhận diện Hình ảnh Trực tuyến',
+    tagline: 'Ứng dụng web nhận diện đối tượng và xử lý ảnh số thời gian thực',
+    description: 'Hệ thống full-stack cho phép người dùng tải lên hình ảnh/video, áp dụng các thuật toán Thị giác máy tính (Computer Vision) để phát hiện vật thể, trích xuất đặc trưng và trực quan hóa kết quả phân tích.',
     category: 'fullstack',
     featured: true,
     image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop',
-    tags: ['React 19', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Docker', 'WebSockets', 'Canvas API'],
-    githubUrl: 'https://github.com/alexnguyen/algorise-visualizer',
-    liveUrl: 'https://algorise-demo.vercel.app',
+    tags: ['React 19', 'TypeScript', 'Python', 'FastAPI', 'OpenCV', 'PyTorch', 'Tailwind CSS'],
+    githubUrl: 'https://github.com/lnanh952005',
+    liveUrl: 'https://github.com/lnanh952005',
     highlights: [
-      'Xây dựng engine bố cục đồ thị 60fps tùy biến bằng HTML5 Canvas và mô phỏng spring-embedder',
-      'Thiết kế container thực thi an toàn bằng Node.js & Docker với cơ chế giới hạn CPU/RAM chặt chẽ',
-      'Phát triển luồng truyền phát WebSocket hai chiều cho phép tạm dừng, tiếp tục và điều chỉnh tốc độ',
-      'Được áp dụng thực tế bởi hơn 300 sinh viên trong các buổi thực hành Cấu trúc dữ liệu'
+      'Xây dựng pipeline tiền xử lý ảnh và suy luận mô hình phát hiện đối tượng với OpenCV và PyTorch',
+      'Thiết kế REST API bất đồng bộ hiệu năng cao bằng FastAPI phục vụ tải ảnh và trả về kết quả suy luận',
+      'Giao diện web trực quan bằng React 19 hiển thị bounding box và thông số nhận diện theo thời gian thực',
+      'Tối ưu hóa thời gian xử lý ảnh đạt tốc độ khung hình ổn định'
     ],
-    architectureDetails: 'Kiến trúc gồm frontend React 19 ứng dụng máy trạng thái (state machines) để tái hiện từng bước giải thuật chuẩn xác, kết hợp bộ điều phối Node.js ủy quyền chạy code tới các Docker sandbox bảo mật tức thời.',
+    architectureDetails: 'Kiến trúc gồm frontend React 19 gửi yêu cầu qua REST/WebSocket tới backend FastAPI, nơi các tác vụ xử lý ảnh và suy luận mô hình Computer Vision được thực thi bất đồng bộ trên nền tảng Python.',
     stats: [
-      { label: 'Người dùng', value: '1.2k+' },
-      { label: 'Lượt chạy sandbox', value: '18k+' },
-      { label: 'Tốc độ khung hình', value: '60 FPS' }
+      { label: 'Độ chính xác mô hình', value: '92%+' },
+      { label: 'Thời gian suy luận', value: '<80ms' },
+      { label: 'Lớp đối tượng', value: '80 classes' }
     ]
   },
   {
-    id: 'campuspulse',
-    title: 'CampusPulse — Chợ sinh viên & Cộng đồng học tập',
-    tagline: 'Sàn trao đổi đồ dùng ngang hàng và cổng tin tức sự kiện học đường đã xác thực',
-    description: 'Ứng dụng web cho phép sinh viên trao đổi giáo trình, thiết bị điện tử và tài liệu học tập với cơ chế xác thực email sinh viên chính thức cùng tính năng nhắn tin tức thời.',
-    category: 'fullstack',
+    id: 'nlp-smart-assistant',
+    title: 'SmartNLP — Trợ lý Tóm tắt & Phân tích Văn bản Tự động',
+    tagline: 'Xử lý ngôn ngữ tự nhiên, phân loại sắc thái và tóm tắt văn bản thông minh',
+    description: 'Ứng dụng xử lý ngôn ngữ tự nhiên hỗ trợ trích xuất thực thể (NER), tóm tắt văn bản dài và phân tích cảm xúc (Sentiment Analysis) văn bản tiếng Việt phục vụ xử lý tài liệu tự động.',
+    category: 'backend',
     featured: false,
     image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1000&auto=format&fit=crop',
-    tags: ['Next.js 15', 'TypeScript', 'PostgreSQL', 'Prisma', 'Tailwind CSS', 'Pusher'],
-    githubUrl: 'https://github.com/alexnguyen/campuspulse-platform',
-    liveUrl: 'https://campuspulse-preview.vercel.app',
+    tags: ['Python', 'NLP', 'FastAPI', 'Transformers', 'HuggingFace', 'Docker'],
+    githubUrl: 'https://github.com/lnanh952005',
+    liveUrl: 'https://github.com/lnanh952005',
     highlights: [
-      'Tích hợp xác thực tên miền email (.edu) với mã token dùng một lần và phân quyền người dùng',
-      'Thiết kế cơ sở dữ liệu PostgreSQL tối ưu chỉ mục (indexing) đạt tốc độ truy vấn dưới 50ms',
-      'Tích hợp chat thời gian thực giữa người mua và người bán với chỉ báo trạng thái online'
+      'Tích hợp các mô hình Transformer mã nguồn mở cho bài toán trích xuất thực thể và tóm tắt tóm lược văn bản',
+      'Xây dựng pipeline chuẩn hóa và tiền xử lý dữ liệu văn bản tiếng Việt',
+      'Đóng gói API và mô hình vào Docker container độc lập, dễ dàng mở rộng và triển khai'
     ],
     stats: [
-      { label: 'Tin đăng', value: '450+' },
-      { label: 'Độ trễ truy vấn', value: '<45ms' }
+      { label: 'Độ dài văn bản xử lý', value: '10k+ từ' },
+      { label: 'Độ trễ API', value: '<120ms' }
     ]
   },
   {
-    id: 'devsync',
-    title: 'DevSync — Hàng đợi tác vụ phân tán nhẹ',
-    tagline: 'Bộ xử lý tác vụ nền thông lượng cao tích hợp bảng điều khiển giám sát viễn trắc',
-    description: 'Hệ thống background worker bền vững xây dựng theo mô hình BullMQ & Celery, hỗ trợ thử lại lùi lũy thừa (exponential backoff), hàng đợi dead-letter và dashboard web theo dõi trạng thái tác vụ.',
+    id: 'ctu-student-portal',
+    title: 'CTU Document Hub — Nền tảng Chia sẻ Tài liệu Học tập Sinh viên',
+    tagline: 'Cổng lưu trữ tài liệu, đề cương và trao đổi học thuật cho sinh viên Đại học Cần Thơ',
+    description: 'Hệ thống web hỗ trợ sinh viên tìm kiếm giáo trình, chia sẻ tài liệu ôn thi và thảo luận môn học theo từng chuyên ngành với giao diện thân thiện và cơ chế phân quyền bảo mật.',
+    category: 'fullstack',
+    featured: false,
+    image: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1000&auto=format&fit=crop',
+    tags: ['React 19', 'TypeScript', 'Node.js', 'Express', 'PostgreSQL', 'Tailwind CSS'],
+    githubUrl: 'https://github.com/lnanh952005',
+    liveUrl: 'https://github.com/lnanh952005',
+    highlights: [
+      'Thiết kế cơ sở dữ liệu quan hệ PostgreSQL với các ràng buộc khóa ngoại và index tối ưu hóa tìm kiếm',
+      'Cơ chế xác thực phân quyền JWT và bảo vệ phiên làm việc an toàn',
+      'Giao diện web thích ứng cao trên cả thiết bị di động và máy tính để bàn'
+    ],
+    stats: [
+      { label: 'Tài liệu quản lý', value: '300+' },
+      { label: 'Thời gian phản hồi', value: '<50ms' }
+    ]
+  },
+  {
+    id: 'task-queue-worker',
+    title: 'Distributed Task Processor — Bộ Xử lý Tác vụ Hàng đợi Nền',
+    tagline: 'Hệ thống hàng đợi nền thông lượng cao hỗ trợ xử lý tác vụ bất đồng bộ',
+    description: 'Bộ xử lý tác vụ nền cho các tác vụ tốn thời gian (xử lý hình ảnh, tổng hợp báo cáo), hỗ trợ tự động thử lại khi lỗi và bảng điều khiển theo dõi trạng thái tác vụ.',
     category: 'backend',
     featured: false,
     image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1000&auto=format&fit=crop',
-    tags: ['Go / Node.js', 'Redis', 'TypeScript', 'REST API', 'Docker', 'Tailwind CSS'],
-    githubUrl: 'https://github.com/alexnguyen/devsync-task-queue',
-    liveUrl: 'https://devsync-telemetry.fly.dev',
+    tags: ['Python', 'Node.js', 'Redis', 'Docker', 'REST API'],
+    githubUrl: 'https://github.com/lnanh952005',
+    liveUrl: 'https://github.com/lnanh952005',
     highlights: [
-      'Xây dựng lập lịch tác vụ ưu tiên và bộ giới hạn tốc độ trượt bằng Redis Lua scripts nguyên tử',
-      'Xử lý kịch bản crash worker với cơ chế theo dõi heartbeat và tự động thu hồi tác vụ thất lạc',
-      'Đạt thông lượng thử nghiệm 8.500 tác vụ/giây với độ trễ thấp dưới tải đồng thời cao'
+      'Tận dụng Redis in-memory làm hàng đợi tin nhắn với khả năng điều tiết lưu lượng',
+      'Cơ chế retry lũy thừa (exponential backoff) giúp hệ thống hoạt động ổn định',
+      'Tách biệt logic xử lý giúp ứng dụng chính phản hồi tức thì cho người dùng'
     ],
     stats: [
-      { label: 'Thông lượng', value: '8.5k tác vụ/s' },
+      { label: 'Tác vụ / giây', value: '5k+ jobs/s' },
       { label: 'Độ tin cậy', value: '99.9%' }
-    ]
-  },
-  {
-    id: 'aurora-ui',
-    title: 'Aurora UI — Thư viện thành phần Headless chuẩn trợ năng',
-    tagline: 'Bộ thành phần giao diện gọn gàng, hỗ trợ phím điều hướng và chuẩn thiết kế đồng nhất',
-    description: 'Tập hợp các UI component React 19 không định kiểu (unstyled) tuân thủ nghiêm ngặt tiêu chuẩn WAI-ARIA, kiểm thử trợ năng tự động và tương tác mượt mà.',
-    category: 'frontend',
-    featured: false,
-    image: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1000&auto=format&fit=crop',
-    tags: ['React 19', 'TypeScript', 'Tailwind CSS', 'Radix Primitives', 'Storybook', 'Vitest'],
-    githubUrl: 'https://github.com/alexnguyen/aurora-component-system',
-    liveUrl: 'https://aurora-ui-docs.vercel.app',
-    highlights: [
-      'Xây dựng 18 thành phần trợ năng (combobox, modal, bảng dữ liệu, tooltip) đạt chuẩn WCAG 2.1 AA',
-      'Thiết lập kiểm thử đơn vị và snapshot toàn diện với Vitest đạt 94% độ phủ kiểm thử',
-      'Đóng gói và xuất bản thư viện mã nguồn mở npm kèm tệp định nghĩa TypeScript (.d.ts)'
-    ],
-    stats: [
-      { label: 'Thành phần', value: '18+' },
-      { label: 'Độ phủ kiểm thử', value: '94%' }
     ]
   }
 ]
@@ -156,65 +156,63 @@ export const projectsData: Project[] = [
 export const skillCategories: SkillCategory[] = [
   {
     title: 'Ngôn ngữ Lập trình',
-    description: 'Các ngôn ngữ nòng cốt dùng cho phát triển hệ thống, kịch bản và ứng dụng web',
+    description: 'Các ngôn ngữ chính sử dụng cho phát triển hệ thống, kịch bản xử lý dữ liệu và ứng dụng web',
     icon: 'Code2',
     skills: [
-      { name: 'TypeScript', level: 'Core', description: 'Kiểu dữ liệu nâng cao, generics, kiểm tra kiểu nghiêm ngặt' },
-      { name: 'JavaScript (ESNext)', level: 'Core', description: 'Async/await, event loop, closures, thao tác DOM' },
-      { name: 'Python', level: 'Core', description: 'Viết kịch bản, FastAPI, giải thuật & cấu trúc dữ liệu' },
-      { name: 'Java', level: 'Proficient', description: 'OOP, Spring Boot, môn học giải thuật trường đại học' },
-      { name: 'Go', level: 'Proficient', description: 'Goroutines, channels, REST microservices' },
-      { name: 'C / C++', level: 'Familiar', description: 'Quản lý bộ nhớ, con trỏ, lập trình thi đấu' }
+      { name: 'Python', level: 'Core', description: 'FastAPI, xử lý dữ liệu, học máy, mô hình AI' },
+      { name: 'TypeScript', level: 'Core', description: 'Kiểu dữ liệu nâng cao, generics, strict type checking' },
+      { name: 'JavaScript (ESNext)', level: 'Core', description: 'Async/await, DOM, Event Loop, lập trình bất đồng bộ' },
+      { name: 'C / C++', level: 'Proficient', description: 'Nền tảng môn học giải thuật & quản lý bộ nhớ' },
+      { name: 'SQL', level: 'Core', description: 'Truy vấn quan hệ, tối ưu hóa chỉ mục và thiết kế lược đồ' }
+    ]
+  },
+  {
+    title: 'Trí tuệ Nhân tạo (CV & NLP)',
+    description: 'Nghiên cứu và ứng dụng Thị giác Máy tính và Xử lý Ngôn ngữ Tự nhiên',
+    icon: 'Sparkles',
+    skills: [
+      { name: 'Computer Vision (OpenCV)', level: 'Core', description: 'Xử lý ảnh số, biến đổi không gian, nhận diện vật thể' },
+      { name: 'PyTorch', level: 'Core', description: 'Huấn luyện và suy luận mô hình Deep Learning' },
+      { name: 'Xử lý Ngôn ngữ Tự nhiên (NLP)', level: 'Core', description: 'Tiền xử lý văn bản tiếng Việt, trích xuất thực thể (NER)' },
+      { name: 'HuggingFace Transformers', level: 'Proficient', description: 'Fine-tuning và ứng dụng mô hình ngôn ngữ lớn' },
+      { name: 'Scikit-learn', level: 'Proficient', description: 'Các thuật toán phân loại, hồi quy và phân cụm dữ liệu' }
     ]
   },
   {
     title: 'Phát triển Frontend',
-    description: 'Xây dựng giao diện người dùng thích ứng, tiếp cận tốt và hiệu năng vượt trội',
+    description: 'Xây dựng giao diện người dùng hiện đại, trực quan và tối ưu trải nghiệm',
     icon: 'Layout',
     skills: [
-      { name: 'React 19', level: 'Core', description: 'Hooks, Server Components, React Compiler, Suspense' },
-      { name: 'Next.js 15', level: 'Core', description: 'App router, server actions, SSR & SSG' },
-      { name: 'Tailwind CSS v4', level: 'Core', description: 'Design tokens, utility classes tùy chỉnh, responsive' },
-      { name: 'HTML5 & Semantic Web', level: 'Core', description: 'Tối ưu hóa SEO, cấu trúc thẻ ngữ nghĩa chuẩn W3C' },
-      { name: 'Framer Motion', level: 'Proficient', description: 'Hoạt ảnh layout, phản hồi cử chỉ, hiệu ứng chuyển cảnh' },
-      { name: 'Quản lý State', level: 'Proficient', description: 'Zustand, TanStack Query, Context API' }
+      { name: 'React 19', level: 'Core', description: 'Hooks, Component Architecture, Suspense, State Management' },
+      { name: 'Tailwind CSS v4', level: 'Core', description: 'Design tokens, dark mode, responsive layout' },
+      { name: 'HTML5 & Semantic Web', level: 'Core', description: 'Cấu trúc thẻ ngữ nghĩa chuẩn SEO và tiếp cận trợ năng' },
+      { name: 'Framer Motion', level: 'Proficient', description: 'Hiệu ứng chuyển cảnh và tương tác mượt mà' },
+      { name: 'State Management (Zustand/Context)', level: 'Proficient', description: 'Quản lý trạng thái ứng dụng đồng nhất' }
     ]
   },
   {
-    title: 'Phát triển Backend',
-    description: 'Thiết kế API bền bỉ, luồng xử lý dữ liệu và kiến trúc vi dịch vụ',
+    title: 'Phát triển Backend & API',
+    description: 'Thiết kế dịch vụ backend hiệu năng cao, RESTful APIs và tích hợp mô hình AI',
     icon: 'Server',
     skills: [
-      { name: 'Node.js & Express', level: 'Core', description: 'REST API, middleware, xác thực người dùng & JWT' },
-      { name: 'FastAPI / Python', level: 'Proficient', description: 'Xác thực Pydantic, async endpoints, OpenAPI' },
-      { name: 'Thiết kế RESTful API', level: 'Core', description: 'Versioning, idempotency, rate limiting, phân trang' },
-      { name: 'WebSockets & SSE', level: 'Proficient', description: 'Giao tiếp hai chiều theo thời gian thực' },
-      { name: 'Kiến trúc Microservices', level: 'Familiar', description: 'Tách biệt dịch vụ, message brokers, caching' }
+      { name: 'FastAPI / Python', level: 'Core', description: 'Async endpoints, Pydantic validation, tài liệu OpenAPI' },
+      { name: 'Node.js & Express', level: 'Core', description: 'REST APIs, middleware, routing và xử lý bất đồng bộ' },
+      { name: 'Thiết kế RESTful API', level: 'Core', description: 'Định dạng chuẩn, phân trang, xử lý lỗi an toàn' },
+      { name: 'Xác thực JWT & Bảo mật', level: 'Proficient', description: 'Bảo vệ endpoint, mã hóa mật khẩu, phân quyền' },
+      { name: 'AI Model Integration', level: 'Core', description: 'Tích hợp mô hình AI vào pipeline backend phục vụ người dùng' }
     ]
   },
   {
-    title: 'Cơ sở dữ liệu & Lưu trữ',
-    description: 'Mô hình hóa dữ liệu, đánh chỉ mục quan hệ và caching độ trễ thấp',
+    title: 'Cơ sở dữ liệu & Công cụ',
+    description: 'Quản trị cơ sở dữ liệu, container hóa và công cụ làm việc nhóm',
     icon: 'Database',
     skills: [
-      { name: 'PostgreSQL', level: 'Core', description: 'Mô hình hóa quan hệ, indexing, giao dịch ACID' },
-      { name: 'Prisma ORM', level: 'Core', description: 'Schema migrations, truy vấn an toàn kiểu dữ liệu' },
-      { name: 'Redis', level: 'Proficient', description: 'Bộ nhớ đệm in-memory, giới hạn tần suất, Pub/Sub' },
-      { name: 'MongoDB', level: 'Proficient', description: 'Document stores, aggregations, schema linh hoạt' },
-      { name: 'MySQL', level: 'Proficient', description: 'Môn học đại học & hệ thống cơ sở dữ liệu doanh nghiệp' }
-    ]
-  },
-  {
-    title: 'Công cụ & DevOps',
-    description: 'Quy trình làm việc kỹ thuật, container hóa và triển khai tự động',
-    icon: 'Wrench',
-    skills: [
-      { name: 'Git & GitHub', level: 'Core', description: 'Quy trình nhánh, review PR, chiến lược merge code' },
-      { name: 'Docker', level: 'Proficient', description: 'Đóng gói multi-stage container, Docker Compose' },
-      { name: 'Linux / Bash', level: 'Proficient', description: 'Thao tác dòng lệnh, shell scripting, quản trị SSH' },
-      { name: 'Postman & Insomnia', level: 'Core', description: 'Kiểm thử API, tự động hóa bộ sưu tập yêu cầu' },
-      { name: 'Vite & Rolldown', level: 'Core', description: 'Build pipeline hiện đại, tối ưu hóa HMR' },
-      { name: 'CI/CD (GitHub Actions)', level: 'Familiar', description: 'Tự động hóa linting, kiểm thử và deploy' }
+      { name: 'PostgreSQL', level: 'Core', description: 'Cơ sở dữ liệu quan hệ, thiết kế schema, indexing' },
+      { name: 'MongoDB', level: 'Proficient', description: 'Document database, cấu trúc dữ liệu JSON linh hoạt' },
+      { name: 'MySQL', level: 'Proficient', description: 'Quản trị cơ sở dữ liệu và truy vấn quan hệ' },
+      { name: 'Git & GitHub', level: 'Core', description: 'Quản lý phiên bản, làm việc nhóm, pull requests' },
+      { name: 'Docker', level: 'Proficient', description: 'Đóng gói ứng dụng và môi trường chạy độc lập' },
+      { name: 'Linux / Bash', level: 'Proficient', description: 'Thao tác dòng lệnh, quản lý tiến trình máy chủ' }
     ]
   }
 ]
@@ -222,85 +220,62 @@ export const skillCategories: SkillCategory[] = [
 export const experienceData: Experience[] = [
   {
     id: 'exp-1',
-    role: 'Trưởng ban Kỹ thuật (Lead Tech Coordinator)',
-    organization: 'Google Developer Student Club (GDSC)',
-    location: 'Trường Đại học',
-    period: 'Tháng 8/2024 — Hiện tại',
-    type: 'Club & Community',
-    description: 'Điều hành các workshop kỹ thuật, định hướng cho hơn 80 sinh viên về phát triển web hiện đại, và phụ trách hạ tầng kỹ thuật cho kỳ thi Hackathon thường niên của trường.',
+    role: 'Nghiên cứu & Phát triển Đồ án Chuyên ngành',
+    organization: 'Khoa Công nghệ Thông tin & Truyền thông — Đại học Cần Thơ',
+    location: 'Đại học Cần Thơ',
+    period: '2023 — Hiện tại',
+    type: 'University Lab',
+    description: 'Thực hiện các đề tài nghiên cứu ứng dụng kết hợp giữa nền tảng phát triển Web và các mô hình Trí tuệ Nhân tạo thực nghiệm.',
     achievements: [
-      'Tổ chức 6 buổi workshop thực hành về React, TypeScript và nền tảng REST API với 95% đánh giá tích cực',
-      'Thiết kế và triển khai cổng thông tin đăng ký và chấm điểm trực tuyến cho hơn 450 thí sinh tham gia',
-      'Cố vấn kỹ thuật cho 4 đội thi trong ngày hội dự án công nghệ sinh viên'
+      'Nghiên cứu và xây dựng mô hình Thị giác máy tính nhận diện và xử lý hình ảnh với độ chính xác cao',
+      'Ứng dụng kỹ thuật Xử lý ngôn ngữ tự nhiên (NLP) vào trích xuất và tóm tắt thông tin văn bản tiếng Việt',
+      'Phát triển ứng dụng Web hoàn chỉnh phục vụ kiểm thử và trình diễn giải pháp mô hình'
     ],
-    technologies: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Docker']
+    technologies: ['Python', 'FastAPI', 'PyTorch', 'OpenCV', 'React', 'TypeScript']
   },
   {
     id: 'exp-2',
-    role: 'Trợ lý Nghiên cứu Khoa học Sinh viên',
-    organization: 'Phòng Thí nghiệm Tính toán Phân tán & AI',
-    location: 'Khoa Công nghệ Thông tin',
-    period: 'Tháng 1/2024 — Tháng 7/2024',
-    type: 'University Lab',
-    description: 'Nghiên cứu các giao thức đồng thuận độ trễ thấp và thu thập dữ liệu tính toán biên dưới sự hướng dẫn của PGS.TS. Phạm.',
-    achievements: [
-      'Đo lường hiện tượng chập chờn mạng (jitter) và độ trễ sao chép trên các cụm cluster mô phỏng',
-      'Hỗ trợ biên soạn báo cáo phân tích hiệu năng được chấp thuận tại hội thảo kỹ thuật của trường',
-      'Phát triển kịch bản Python tự động tổng hợp và trực quan hóa hơn 100.000 điểm dữ liệu viễn trắc'
-    ],
-    technologies: ['Python', 'Docker', 'Linux', 'Go', 'Data Visualization']
-  },
-  {
-    id: 'exp-3',
-    role: 'Trợ giảng — Cấu trúc dữ liệu & Giải thuật',
-    organization: 'Bộ môn Khoa học Máy tính',
-    location: 'Trường Đại học',
-    period: 'Tháng 9/2023 — Tháng 12/2023',
+    role: 'Thành viên Hoạt động Kỹ thuật & Học thuật Sinh viên',
+    organization: 'Bộ môn Khoa học Máy tính — Đại học Cần Thơ',
+    location: 'Đại học Cần Thơ',
+    period: '2023 — Hiện tại',
     type: 'Academic Teaching',
-    description: 'Hỗ trợ giảng viên hướng dẫn các buổi thực hành lab hàng tuần, chấm bài tập lập trình và giải đáp thắc mắc cho hơn 120 sinh viên.',
+    description: 'Tham gia các buổi trao đổi chuyên môn, hội thảo chia sẻ kinh nghiệm học tập và hỗ trợ các bạn sinh viên cùng khóa về giải thuật và lập trình.',
     achievements: [
-      'Review và gỡ lỗi hơn 400 bài tập C++ / Java, phân tích độ phức tạp thời gian và không gian (Big-O)',
-      'Biên soạn tài liệu trực quan bổ trợ cho các chủ đề đệ quy, cây nhị phân tìm kiếm và quy hoạch động'
+      'Tham gia thảo luận và giải quyết các bài toán cấu trúc dữ liệu và giải thuật nâng cao',
+      'Chia sẻ kiến thức về quy trình làm việc với Git/GitHub và xây dựng ứng dụng web hiện đại',
+      'Đạt thành tích học tập tốt qua các học kỳ chuyên ngành'
     ],
-    technologies: ['C++', 'Java', 'Giải thuật', 'Git']
+    technologies: ['C++', 'Python', 'Web Development', 'Git', 'Data Structures']
   }
 ]
 
 export const certificationsData: Certification[] = [
   {
     id: 'cert-1',
-    title: 'Chứng chỉ Chuyên nghiệp Meta Front-End Developer',
-    issuer: 'Meta / Coursera',
-    date: 'Tháng 10/2024',
+    title: 'Chứng chỉ Tiếng Anh Quốc tế TOEIC 550',
+    issuer: 'ETS (Educational Testing Service)',
+    date: 'Năm 2024',
     badgeText: 'Đã xác minh',
-    credentialUrl: 'https://coursera.org',
+    credentialUrl: '#',
     icon: 'Award'
   },
   {
     id: 'cert-2',
-    title: 'AWS Certified Cloud Practitioner (Foundational)',
-    issuer: 'Amazon Web Services',
-    date: 'Tháng 7/2024',
-    badgeText: 'Đang hiệu lực',
-    credentialUrl: 'https://aws.amazon.com',
+    title: 'Chương trình Đào tạo Khoa học Máy tính',
+    issuer: 'Khoa CNTT&TT — Đại học Cần Thơ',
+    date: '2023 — 2027',
+    badgeText: 'Đang theo học',
+    credentialUrl: 'https://www.ctu.edu.vn',
     icon: 'Cloud'
   },
   {
     id: 'cert-3',
-    title: 'Chứng chỉ Problem Solving (Advanced)',
-    issuer: 'HackerRank',
-    date: 'Tháng 5/2024',
-    badgeText: 'Top 5%',
-    credentialUrl: 'https://hackerrank.com',
-    icon: 'Code'
-  },
-  {
-    id: 'cert-4',
-    title: 'Lập trình sinh viên Quốc tế ICPC — Vòng loại Khu vực',
-    issuer: 'ICPC Asia Regional',
-    date: 'Tháng 12/2023',
-    badgeText: 'Chung kết',
+    title: 'Năng lực Lập trình & Giải thuật',
+    issuer: 'Bộ môn Khoa học Máy tính — ĐH Cần Thơ',
+    date: '2023 — 2024',
+    badgeText: 'Hoàn thành',
     credentialUrl: '#',
-    icon: 'Trophy'
+    icon: 'Code'
   }
 ]

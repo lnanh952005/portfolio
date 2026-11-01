@@ -124,10 +124,11 @@ ${experienceData.map(e => `- ${e.role} @ ${e.organization} (${e.period}):\n  ${e
               Kỹ năng Chuyên môn
             </h2>
             <div className="space-y-1.5 text-xs text-neutral-700 dark:text-zinc-300">
-              <p><strong className="text-neutral-900 dark:text-white">Ngôn ngữ:</strong> TypeScript, JavaScript, Python, Java, Go, C/C++</p>
-              <p><strong className="text-neutral-900 dark:text-white">Frontend:</strong> React 19, Next.js 15, Tailwind CSS, HTML5/CSS3, Zustand</p>
-              <p><strong className="text-neutral-900 dark:text-white">Backend:</strong> Node.js, Express, FastAPI, REST APIs, WebSockets</p>
-              <p><strong className="text-neutral-900 dark:text-white">Cơ sở dữ liệu & DevOps:</strong> PostgreSQL, Prisma, Redis, Docker, Git/GitHub, Linux</p>
+              <p><strong className="text-neutral-900 dark:text-white">Ngôn ngữ:</strong> Python, TypeScript, JavaScript, C/C++, SQL</p>
+              <p><strong className="text-neutral-900 dark:text-white">AI & Trí tuệ Nhân tạo:</strong> Thị giác máy tính (OpenCV), PyTorch, NLP, HuggingFace, Scikit-learn</p>
+              <p><strong className="text-neutral-900 dark:text-white">Phát triển Web:</strong> React 19, Tailwind CSS v4, FastAPI, Node.js, RESTful APIs, JWT</p>
+              <p><strong className="text-neutral-900 dark:text-white">Cơ sở dữ liệu & DevOps:</strong> PostgreSQL, MongoDB, MySQL, Docker, Git/GitHub, Linux</p>
+              <p><strong className="text-neutral-900 dark:text-white">Chứng chỉ Ngoại ngữ:</strong> TOEIC 550 (Tiếng Anh)</p>
             </div>
           </div>
 

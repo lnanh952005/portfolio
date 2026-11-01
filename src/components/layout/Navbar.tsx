@@ -72,7 +72,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCvModal }) => {
             className="group flex items-center gap-2.5 font-bold text-lg text-neutral-900 dark:text-zinc-100 tracking-tight"
           >
             <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-blue-600 text-white font-black text-sm shadow-sm group-hover:scale-105 transition-transform">
-              AN
+              NA
             </span>
             <div className="flex flex-col">
               <span className="leading-tight font-extrabold flex items-center gap-1">
@@ -80,7 +80,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCvModal }) => {
                 <span className="h-1.5 w-1.5 rounded-full bg-blue-600 inline-block"></span>
               </span>
               <span className="text-[10px] font-medium text-neutral-400 dark:text-zinc-500 tracking-wider uppercase">
-                Thực tập sinh SWE
+                Khoa học Máy tính
               </span>
             </div>
           </a>

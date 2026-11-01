@@ -62,20 +62,20 @@ export const AboutSection: React.FC = () => {
 
               <div className="pt-2 grid grid-cols-2 sm:grid-cols-4 gap-3">
                 <div className="rounded-2xl bg-zinc-50 dark:bg-zinc-800/60 p-3 border border-zinc-200/60 dark:border-zinc-800">
-                  <span className="text-xs text-neutral-400 dark:text-zinc-400 block font-medium">Điểm tích lũy GPA</span>
+                  <span className="text-xs text-neutral-400 dark:text-zinc-400 block font-medium">Học lực</span>
                   <span className="text-base sm:text-lg font-bold text-neutral-900 dark:text-zinc-100">{candidateData.education.gpa}</span>
                 </div>
                 <div className="rounded-2xl bg-zinc-50 dark:bg-zinc-800/60 p-3 border border-zinc-200/60 dark:border-zinc-800">
-                  <span className="text-xs text-neutral-400 dark:text-zinc-400 block font-medium">Xếp hạng khóa</span>
-                  <span className="text-base sm:text-lg font-bold text-blue-600 dark:text-blue-400">Top 5%</span>
+                  <span className="text-xs text-neutral-400 dark:text-zinc-400 block font-medium">Tiếng Anh</span>
+                  <span className="text-base sm:text-lg font-bold text-blue-600 dark:text-blue-400">TOEIC 550</span>
                 </div>
                 <div className="rounded-2xl bg-zinc-50 dark:bg-zinc-800/60 p-3 border border-zinc-200/60 dark:border-zinc-800">
-                  <span className="text-xs text-neutral-400 dark:text-zinc-400 block font-medium">Dự án đã làm</span>
-                  <span className="text-base sm:text-lg font-bold text-neutral-900 dark:text-zinc-100">12+ Repos</span>
+                  <span className="text-xs text-neutral-400 dark:text-zinc-400 block font-medium">Lĩnh vực chính</span>
+                  <span className="text-base sm:text-lg font-bold text-neutral-900 dark:text-zinc-100">Web & AI</span>
                 </div>
                 <div className="rounded-2xl bg-zinc-50 dark:bg-zinc-800/60 p-3 border border-zinc-200/60 dark:border-zinc-800">
-                  <span className="text-xs text-neutral-400 dark:text-zinc-400 block font-medium">Hoạt động code</span>
-                  <span className="text-base sm:text-lg font-bold text-neutral-900 dark:text-zinc-100">650+ Commits</span>
+                  <span className="text-xs text-neutral-400 dark:text-zinc-400 block font-medium">Trạng thái</span>
+                  <span className="text-base sm:text-lg font-bold text-neutral-900 dark:text-zinc-100">Sẵn sàng</span>
                 </div>
               </div>
             </div>
