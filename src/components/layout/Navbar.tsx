@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { FileDown, Menu, X } from 'lucide-react'
 import { Button } from '../ui/Button'
+import { ThemeToggle } from '../ui/ThemeToggle'
 import { candidateData } from '../../data/portfolioData'
 
 interface NavbarProps {
@@ -13,11 +14,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCvModal }) => {
   const [activeSection, setActiveSection] = useState('hero')
 
   const navLinks = [
-    { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Contact', href: '#contact' }
+    { name: 'Giới thiệu', href: '#about' },
+    { name: 'Kỹ năng', href: '#skills' },
+    { name: 'Dự án', href: '#projects' },
+    { name: 'Kinh nghiệm', href: '#experience' },
+    { name: 'Liên hệ', href: '#contact' }
   ]
 
   useEffect(() => {
@@ -58,7 +59,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCvModal }) => {
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/80 backdrop-blur-md border-b border-zinc-200/70 shadow-xs py-3'
+          ? 'bg-white/80 dark:bg-zinc-900/85 backdrop-blur-md border-b border-zinc-200/70 dark:border-zinc-800 shadow-xs py-3'
           : 'bg-transparent py-5'
       }`}
     >
@@ -68,7 +69,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCvModal }) => {
           <a
             href="#hero"
             onClick={(e) => handleNavClick(e, '#hero')}
-            className="group flex items-center gap-2.5 font-bold text-lg text-neutral-900 tracking-tight"
+            className="group flex items-center gap-2.5 font-bold text-lg text-neutral-900 dark:text-zinc-100 tracking-tight"
           >
             <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-blue-600 text-white font-black text-sm shadow-sm group-hover:scale-105 transition-transform">
               AN
@@ -78,14 +79,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCvModal }) => {
                 {candidateData.name}
                 <span className="h-1.5 w-1.5 rounded-full bg-blue-600 inline-block"></span>
               </span>
-              <span className="text-[10px] font-medium text-neutral-400 tracking-wider uppercase">
-                SWE Intern
+              <span className="text-[10px] font-medium text-neutral-400 dark:text-zinc-500 tracking-wider uppercase">
+                Thực tập sinh SWE
               </span>
             </div>
           </a>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-1 bg-white/70 p-1.5 rounded-full border border-zinc-200/60 shadow-2xs backdrop-blur-xs">
+          <nav className="hidden md:flex items-center gap-1 bg-white/70 dark:bg-zinc-900/70 p-1.5 rounded-full border border-zinc-200/60 dark:border-zinc-800 shadow-2xs backdrop-blur-xs">
             {navLinks.map((link) => {
               const isActive = activeSection === link.href.substring(1)
               return (
@@ -95,8 +96,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCvModal }) => {
                   onClick={(e) => handleNavClick(e, link.href)}
                   className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 ${
                     isActive
-                      ? 'bg-neutral-900 text-white shadow-2xs'
-                      : 'text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100/70'
+                      ? 'bg-neutral-900 dark:bg-zinc-100 text-white dark:text-zinc-950 shadow-2xs'
+                      : 'text-neutral-600 dark:text-zinc-400 hover:text-neutral-900 dark:hover:text-zinc-100 hover:bg-neutral-100/70 dark:hover:bg-zinc-800'
                   }`}
                 >
                   {link.name}
@@ -105,14 +106,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCvModal }) => {
             })}
           </nav>
 
-          {/* Actions: Open to Work Pill + Download CV Button */}
-          <div className="hidden sm:flex items-center gap-3">
-            <div className="hidden lg:flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/60 text-[11px] font-medium text-emerald-700">
+          {/* Actions: Theme Toggle + Open to Work Pill + Download CV Button */}
+          <div className="hidden sm:flex items-center gap-2.5">
+            {/* Theme Toggle Button */}
+            <ThemeToggle />
+
+            <div className="hidden lg:flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200/60 dark:border-emerald-800/60 text-[11px] font-medium text-emerald-700 dark:text-emerald-300">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
               </span>
-              Open to Internship
+              Sẵn sàng thực tập
             </div>
 
             <Button
@@ -122,25 +126,26 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCvModal }) => {
               onClick={onOpenCvModal}
               className="text-xs font-semibold"
             >
-              Download CV
+              Tải CV
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Actions */}
           <div className="flex sm:hidden items-center gap-2">
+            <ThemeToggle size="sm" />
             <Button
               variant="outline"
               size="sm"
               onClick={onOpenCvModal}
               className="text-xs px-2.5 h-8"
-              aria-label="Download CV"
+              aria-label="Tải CV"
             >
               <FileDown className="h-3.5 w-3.5" />
             </Button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-xl text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 transition-colors"
-              aria-label="Toggle navigation menu"
+              className="p-2 rounded-xl text-neutral-600 dark:text-zinc-400 hover:text-neutral-900 dark:hover:text-zinc-100 hover:bg-neutral-100 dark:hover:bg-zinc-800 transition-colors"
+              aria-label="Mở menu điều hướng"
             >
               {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
@@ -150,25 +155,25 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCvModal }) => {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="sm:hidden bg-white/95 backdrop-blur-lg border-b border-zinc-200 shadow-xl px-4 py-5 animate-in slide-in-from-top-4 duration-200">
+        <div className="sm:hidden bg-white/95 dark:bg-zinc-900/95 backdrop-blur-lg border-b border-zinc-200 dark:border-zinc-800 shadow-xl px-4 py-5 animate-in slide-in-from-top-4 duration-200">
           <div className="flex flex-col gap-1.5">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="px-4 py-2.5 rounded-xl text-sm font-semibold text-neutral-700 hover:text-neutral-900 hover:bg-neutral-50"
+                className="px-4 py-2.5 rounded-xl text-sm font-semibold text-neutral-700 dark:text-zinc-300 hover:text-neutral-900 dark:hover:text-zinc-100 hover:bg-neutral-50 dark:hover:bg-zinc-800/60"
               >
                 {link.name}
               </a>
             ))}
-            <div className="pt-3 mt-2 border-t border-zinc-100 flex flex-col gap-2.5">
-              <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/60 text-xs font-medium text-emerald-700 w-fit">
+            <div className="pt-3 mt-2 border-t border-zinc-100 dark:border-zinc-800 flex flex-col gap-2.5">
+              <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200/60 dark:border-emerald-800/60 text-xs font-medium text-emerald-700 dark:text-emerald-300 w-fit">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                 </span>
-                Open to Internship
+                Sẵn sàng thực tập
               </div>
               <Button
                 variant="primary"
@@ -180,7 +185,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCvModal }) => {
                 }}
                 className="w-full text-xs font-semibold justify-center"
               >
-                View & Download CV
+                Xem & Tải CV
               </Button>
             </div>
           </div>

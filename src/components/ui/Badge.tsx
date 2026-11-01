@@ -18,11 +18,11 @@ export const Badge: React.FC<BadgeProps> = ({
   ...props
 }) => {
   const variantStyles = {
-    neutral: 'bg-zinc-100 text-zinc-700 border-zinc-200/60',
-    default: 'bg-neutral-900 text-white border-transparent',
-    blue: 'bg-blue-50 text-blue-700 border-blue-200/60',
-    success: 'bg-emerald-50 text-emerald-700 border-emerald-200/60',
-    outline: 'bg-transparent text-zinc-600 border-zinc-200 hover:border-zinc-300'
+    neutral: 'bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border-zinc-200/60 dark:border-zinc-700/60',
+    default: 'bg-neutral-900 dark:bg-zinc-100 text-white dark:text-zinc-950 border-transparent',
+    blue: 'bg-blue-50 dark:bg-blue-950/40 text-blue-700 dark:text-blue-300 border-blue-200/60 dark:border-blue-900/60',
+    success: 'bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 border-emerald-200/60 dark:border-emerald-900/60',
+    outline: 'bg-transparent text-zinc-600 dark:text-zinc-400 border-zinc-200 dark:border-zinc-700 hover:border-zinc-300 dark:hover:border-zinc-600'
   }
 
   const sizeStyles = {
@@ -52,4 +52,3 @@ export const Badge: React.FC<BadgeProps> = ({
     </span>
   )
 }
-

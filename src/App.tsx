@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { ThemeProvider } from './context/ThemeContext'
 import { Navbar } from './components/layout/Navbar'
 import { Footer } from './components/layout/Footer'
 import { HeroSection } from './components/sections/HeroSection'
@@ -10,18 +11,14 @@ import { CertificationsSection } from './components/sections/CertificationsSecti
 import { ContactSection } from './components/sections/ContactSection'
 import { CvModal } from './components/ui/CvModal'
 
-export function App() {
+export function AppContent() {
   const [isCvModalOpen, setIsCvModalOpen] = useState(false)
 
   return (
-    <div className="relative min-h-screen bg-[#FAFAFA] text-[#171717] antialiased">
+    <div className="relative min-h-screen bg-[#FAFAFA] dark:bg-[#09090b] text-[#171717] dark:text-[#f4f4f5] antialiased transition-colors duration-200">
       {/* Background Subtle Dot Pattern */}
       <div 
-        className="pointer-events-none absolute inset-0 z-0 opacity-[0.35]"
-        style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, #d4d4d8 1px, transparent 0)`,
-          backgroundSize: '24px 24px'
-        }}
+        className="pointer-events-none absolute inset-0 z-0 opacity-[0.35] dark:opacity-[0.25] [background-image:radial-gradient(circle_at_1px_1px,#d4d4d8_1px,transparent_0)] dark:[background-image:radial-gradient(circle_at_1px_1px,#3f3f46_1px,transparent_0)] [background-size:24px_24px]"
       />
 
       {/* Main Navigation */}
@@ -47,6 +44,14 @@ export function App() {
         onClose={() => setIsCvModalOpen(false)}
       />
     </div>
+  )
+}
+
+export function App() {
+  return (
+    <ThemeProvider>
+      <AppContent />
+    </ThemeProvider>
   )
 }
 

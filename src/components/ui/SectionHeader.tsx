@@ -25,19 +25,18 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
       )}
     >
       {badge && (
-        <span className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-blue-50 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-blue-700 border border-blue-200/50">
+        <span className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-blue-50 dark:bg-blue-950/40 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-blue-700 dark:text-blue-300 border border-blue-200/50 dark:border-blue-900/50">
           {badge}
         </span>
       )}
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-neutral-900">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-neutral-900 dark:text-zinc-100">
         {title}
       </h2>
       {subtitle && (
-        <p className="mt-3 text-base sm:text-lg text-neutral-500 max-w-2xl font-normal leading-relaxed">
+        <p className="mt-3 text-base sm:text-lg text-neutral-500 dark:text-zinc-400 max-w-2xl font-normal leading-relaxed">
           {subtitle}
         </p>
       )}
     </div>
   )
 }
-

@@ -45,7 +45,7 @@ export const Modal: React.FC<ModalProps> = ({
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
       {/* Backdrop */}
       <div
-        className="fixed inset-0 bg-neutral-900/40 backdrop-blur-xs transition-opacity duration-200"
+        className="fixed inset-0 bg-neutral-900/50 dark:bg-black/70 backdrop-blur-xs transition-opacity duration-200"
         onClick={onClose}
         aria-hidden="true"
       />
@@ -55,16 +55,16 @@ export const Modal: React.FC<ModalProps> = ({
         role="dialog"
         aria-modal="true"
         aria-labelledby="modal-headline"
-        className={`relative w-full ${maxWidthClass} rounded-3xl bg-white p-6 sm:p-8 shadow-2xl border border-zinc-200/90 z-10 my-8 transition-all duration-300 animate-in fade-in zoom-in-95`}
+        className={`relative w-full ${maxWidthClass} rounded-3xl bg-white dark:bg-zinc-900 p-6 sm:p-8 shadow-2xl border border-zinc-200/90 dark:border-zinc-800 z-10 my-8 transition-all duration-300 animate-in fade-in zoom-in-95`}
       >
-        <div className="flex items-center justify-between pb-4 border-b border-zinc-100">
-          <h3 id="modal-headline" className="text-xl font-bold text-neutral-900">
+        <div className="flex items-center justify-between pb-4 border-b border-zinc-100 dark:border-zinc-800">
+          <h3 id="modal-headline" className="text-xl font-bold text-neutral-900 dark:text-zinc-100">
             {title}
           </h3>
           <button
             onClick={onClose}
-            className="rounded-full p-2 text-zinc-400 hover:text-zinc-700 hover:bg-zinc-100 transition-colors cursor-pointer"
-            aria-label="Close modal"
+            className="rounded-full p-2 text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors cursor-pointer"
+            aria-label="Đóng cửa sổ"
           >
             <X className="h-5 w-5" />
           </button>
@@ -77,4 +77,3 @@ export const Modal: React.FC<ModalProps> = ({
     </div>
   )
 }
-

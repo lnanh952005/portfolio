@@ -15,26 +15,26 @@ export const CvModal: React.FC<CvModalProps> = ({ isOpen, onClose }) => {
   }
 
   const handleDownload = () => {
-    // Generates a clean text/markdown download of the CV or opens print dialog
+    // Tạo bản tóm tắt markdown tiếng Việt của CV để tải về
     const content = `
 ${candidateData.name} - ${candidateData.targetRoles.join(' / ')}
-Email: ${candidateData.contacts.email} | Location: ${candidateData.location.city}, ${candidateData.location.country}
+Email: ${candidateData.contacts.email} | Địa điểm: ${candidateData.location.city}, ${candidateData.location.country}
 GitHub: ${candidateData.contacts.github} | LinkedIn: ${candidateData.contacts.linkedin}
 
-SUMMARY:
+TÓM TẮT MỤC TIÊU:
 ${candidateData.bio}
 
-EDUCATION:
+HỌC VẤN:
 ${candidateData.education.degree} - ${candidateData.education.institution} (${candidateData.education.period})
-GPA: ${candidateData.education.gpa}
+Điểm GPA: ${candidateData.education.gpa}
 
-TECHNICAL SKILLS:
+KỸ NĂNG KỸ THUẬT:
 ${skillCategories.map(c => `${c.title}: ${c.skills.map(s => s.name).join(', ')}`).join('\n')}
 
-FEATURED PROJECTS:
-${projectsData.map(p => `- ${p.title} (${p.tags.join(', ')}):\n  ${p.description}\n  Highlights:\n${p.highlights.map(h => `    * ${h}`).join('\n')}`).join('\n\n')}
+DỰ ÁN NỔI BẬT:
+${projectsData.map(p => `- ${p.title} (${p.tags.join(', ')}):\n  ${p.description}\n  Điểm nhấn kỹ thuật:\n${p.highlights.map(h => `    * ${h}`).join('\n')}`).join('\n\n')}
 
-EXPERIENCE:
+KINH NGHIỆM & HOẠT ĐỘNG:
 ${experienceData.map(e => `- ${e.role} @ ${e.organization} (${e.period}):\n  ${e.description}\n${e.achievements.map(a => `    * ${a}`).join('\n')}`).join('\n\n')}
     `.trim()
 
@@ -42,7 +42,7 @@ ${experienceData.map(e => `- ${e.role} @ ${e.organization} (${e.period}):\n  ${e
     const url = URL.createObjectURL(blob)
     const link = document.createElement('a')
     link.href = url
-    link.download = `${candidateData.name.replace(/\s+/g, '_')}_Resume_SWE_Intern.md`
+    link.download = `${candidateData.name.replace(/\s+/g, '_')}_CV_ThucTapSinh_SWE.md`
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
@@ -50,12 +50,12 @@ ${experienceData.map(e => `- ${e.role} @ ${e.organization} (${e.period}):\n  ${e
   }
 
   return (
-    <Modal isOpen={isOpen} onClose={onClose} title="Curriculum Vitae / Resume" maxWidth="3xl">
+    <Modal isOpen={isOpen} onClose={onClose} title="Sơ yếu Lý lịch / CV Ứng viên" maxWidth="3xl">
       <div className="flex flex-col gap-6">
         {/* Action Header */}
-        <div className="flex flex-wrap items-center justify-between gap-3 bg-zinc-50 p-3.5 rounded-2xl border border-zinc-200/80">
-          <div className="text-xs text-neutral-600 font-medium">
-            Standard Format • Tailored for Software Engineering Internships
+        <div className="flex flex-wrap items-center justify-between gap-3 bg-zinc-50 dark:bg-zinc-800/60 p-3.5 rounded-2xl border border-zinc-200/80 dark:border-zinc-700/80">
+          <div className="text-xs text-neutral-600 dark:text-zinc-300 font-medium">
+            Định dạng Chuẩn • Tối ưu cho vị trí Thực tập sinh Kỹ sư Phần mềm
           </div>
           <div className="flex items-center gap-2">
             <Button
@@ -64,7 +64,7 @@ ${experienceData.map(e => `- ${e.role} @ ${e.organization} (${e.period}):\n  ${e
               icon={<Printer className="h-3.5 w-3.5" />}
               onClick={handlePrint}
             >
-              Print / Save PDF
+              In / Lưu PDF
             </Button>
             <Button
               variant="primary"
@@ -72,22 +72,22 @@ ${experienceData.map(e => `- ${e.role} @ ${e.organization} (${e.period}):\n  ${e
               icon={<Download className="h-3.5 w-3.5" />}
               onClick={handleDownload}
             >
-              Download (.md/.txt)
+              Tải CV (.md)
             </Button>
           </div>
         </div>
 
         {/* Paper CV Preview */}
-        <div className="rounded-2xl border border-zinc-200 bg-white p-6 sm:p-8 text-neutral-800 shadow-xs space-y-6 text-sm">
+        <div className="rounded-2xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-850 p-6 sm:p-8 text-neutral-800 dark:text-zinc-200 shadow-xs space-y-6 text-sm">
           {/* Header */}
-          <div className="border-b border-zinc-200 pb-5">
-            <h1 className="text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight">
+          <div className="border-b border-zinc-200 dark:border-zinc-700 pb-5">
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-neutral-900 dark:text-white tracking-tight">
               {candidateData.name}
             </h1>
-            <p className="text-blue-600 font-semibold mt-1 text-sm">
+            <p className="text-blue-600 dark:text-blue-400 font-semibold mt-1 text-sm">
               {candidateData.targetRoles.join(' • ')}
             </p>
-            <div className="mt-3 flex flex-wrap gap-y-1 gap-x-4 text-xs text-neutral-500">
+            <div className="mt-3 flex flex-wrap gap-y-1 gap-x-4 text-xs text-neutral-500 dark:text-zinc-400">
               <span className="flex items-center gap-1">
                 <Mail className="h-3.5 w-3.5" />
                 {candidateData.contacts.email}
@@ -105,46 +105,46 @@ ${experienceData.map(e => `- ${e.role} @ ${e.organization} (${e.period}):\n  ${e
 
           {/* Education */}
           <div>
-            <h2 className="text-xs font-bold uppercase tracking-wider text-neutral-400 border-b border-zinc-100 pb-1 mb-2">
-              Education
+            <h2 className="text-xs font-bold uppercase tracking-wider text-neutral-400 dark:text-zinc-400 border-b border-zinc-100 dark:border-zinc-800 pb-1 mb-2">
+              Học vấn
             </h2>
             <div className="flex justify-between items-start">
               <div>
-                <p className="font-bold text-neutral-900">{candidateData.education.institution}</p>
-                <p className="text-xs text-neutral-600">{candidateData.education.degree}</p>
-                <p className="text-xs text-neutral-500 mt-1">GPA: <span className="font-semibold text-neutral-800">{candidateData.education.gpa}</span></p>
+                <p className="font-bold text-neutral-900 dark:text-zinc-100">{candidateData.education.institution}</p>
+                <p className="text-xs text-neutral-600 dark:text-zinc-300">{candidateData.education.degree}</p>
+                <p className="text-xs text-neutral-500 dark:text-zinc-400 mt-1">Điểm GPA: <span className="font-semibold text-neutral-800 dark:text-zinc-200">{candidateData.education.gpa}</span></p>
               </div>
-              <span className="text-xs text-neutral-400 font-medium">{candidateData.education.period}</span>
+              <span className="text-xs text-neutral-400 dark:text-zinc-400 font-medium">{candidateData.education.period}</span>
             </div>
           </div>
 
           {/* Skills */}
           <div>
-            <h2 className="text-xs font-bold uppercase tracking-wider text-neutral-400 border-b border-zinc-100 pb-1 mb-2">
-              Technical Stack
+            <h2 className="text-xs font-bold uppercase tracking-wider text-neutral-400 dark:text-zinc-400 border-b border-zinc-100 dark:border-zinc-800 pb-1 mb-2">
+              Kỹ năng Chuyên môn
             </h2>
-            <div className="space-y-1.5 text-xs">
-              <p><strong className="text-neutral-900">Languages:</strong> TypeScript, JavaScript, Python, Java, Go, C/C++</p>
-              <p><strong className="text-neutral-900">Frontend:</strong> React 19, Next.js 15, Tailwind CSS, HTML5/CSS3, Zustand</p>
-              <p><strong className="text-neutral-900">Backend:</strong> Node.js, Express, FastAPI, REST APIs, WebSockets</p>
-              <p><strong className="text-neutral-900">Databases & DevOps:</strong> PostgreSQL, Prisma, Redis, Docker, Git/GitHub, Linux</p>
+            <div className="space-y-1.5 text-xs text-neutral-700 dark:text-zinc-300">
+              <p><strong className="text-neutral-900 dark:text-white">Ngôn ngữ:</strong> TypeScript, JavaScript, Python, Java, Go, C/C++</p>
+              <p><strong className="text-neutral-900 dark:text-white">Frontend:</strong> React 19, Next.js 15, Tailwind CSS, HTML5/CSS3, Zustand</p>
+              <p><strong className="text-neutral-900 dark:text-white">Backend:</strong> Node.js, Express, FastAPI, REST APIs, WebSockets</p>
+              <p><strong className="text-neutral-900 dark:text-white">Cơ sở dữ liệu & DevOps:</strong> PostgreSQL, Prisma, Redis, Docker, Git/GitHub, Linux</p>
             </div>
           </div>
 
           {/* Projects */}
           <div>
-            <h2 className="text-xs font-bold uppercase tracking-wider text-neutral-400 border-b border-zinc-100 pb-1 mb-3">
-              Key Projects
+            <h2 className="text-xs font-bold uppercase tracking-wider text-neutral-400 dark:text-zinc-400 border-b border-zinc-100 dark:border-zinc-800 pb-1 mb-3">
+              Dự án Tiêu biểu
             </h2>
             <div className="space-y-4">
               {projectsData.slice(0, 3).map((proj) => (
                 <div key={proj.id} className="text-xs">
-                  <div className="flex justify-between font-bold text-neutral-900">
+                  <div className="flex justify-between font-bold text-neutral-900 dark:text-zinc-100">
                     <span>{proj.title}</span>
-                    <span className="text-[11px] text-neutral-400 font-normal">Personal Project</span>
+                    <span className="text-[11px] text-neutral-400 dark:text-zinc-400 font-normal">Dự án Cá nhân</span>
                   </div>
-                  <p className="text-neutral-600 text-[11px] mt-0.5">{proj.tags.join(' • ')}</p>
-                  <ul className="list-disc list-inside mt-1.5 space-y-0.5 text-neutral-600">
+                  <p className="text-neutral-600 dark:text-zinc-400 text-[11px] mt-0.5">{proj.tags.join(' • ')}</p>
+                  <ul className="list-disc list-inside mt-1.5 space-y-0.5 text-neutral-600 dark:text-zinc-300">
                     {proj.highlights.slice(0, 2).map((h, idx) => (
                       <li key={idx}>{h}</li>
                     ))}
@@ -156,17 +156,17 @@ ${experienceData.map(e => `- ${e.role} @ ${e.organization} (${e.period}):\n  ${e
 
           {/* Experience */}
           <div>
-            <h2 className="text-xs font-bold uppercase tracking-wider text-neutral-400 border-b border-zinc-100 pb-1 mb-3">
-              Leadership & Experience
+            <h2 className="text-xs font-bold uppercase tracking-wider text-neutral-400 dark:text-zinc-400 border-b border-zinc-100 dark:border-zinc-800 pb-1 mb-3">
+              Hoạt động & Kinh nghiệm
             </h2>
             <div className="space-y-3">
               {experienceData.slice(0, 2).map((exp) => (
                 <div key={exp.id} className="text-xs">
-                  <div className="flex justify-between font-bold text-neutral-900">
+                  <div className="flex justify-between font-bold text-neutral-900 dark:text-zinc-100">
                     <span>{exp.role} — {exp.organization}</span>
-                    <span className="text-neutral-400 font-normal">{exp.period}</span>
+                    <span className="text-neutral-400 dark:text-zinc-400 font-normal">{exp.period}</span>
                   </div>
-                  <p className="text-neutral-600 mt-1">{exp.description}</p>
+                  <p className="text-neutral-600 dark:text-zinc-300 mt-1">{exp.description}</p>
                 </div>
               ))}
             </div>
