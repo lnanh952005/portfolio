@@ -1,7 +1,7 @@
 import React from 'react'
 import { Modal } from './Modal'
 import { Button } from './Button'
-import { Download, Printer, Mail, MapPin, GraduationCap } from 'lucide-react'
+import { Download, FileText, Mail, MapPin, GraduationCap } from 'lucide-react'
 import { candidateData, skillCategories, experienceData, projectsData } from '../../data/portfolioData'
 
 interface CvModalProps {
@@ -10,8 +10,13 @@ interface CvModalProps {
 }
 
 export const CvModal: React.FC<CvModalProps> = ({ isOpen, onClose }) => {
-  const handlePrint = () => {
-    window.print()
+  const handleDownloadPdf = () => {
+    const link = document.createElement('a')
+    link.href = '/Le_Nhat_Anh_CV.pdf'
+    link.download = `${candidateData.name.replace(/\s+/g, '_')}_CV_ThucTapSinh_SWE.pdf`
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
   }
 
   const handleDownload = () => {
@@ -59,17 +64,17 @@ ${experienceData.map(e => `- ${e.role} @ ${e.organization} (${e.period}):\n  ${e
           </div>
           <div className="flex items-center gap-2">
             <Button
-              variant="outline"
-              size="sm"
-              icon={<Printer className="h-3.5 w-3.5" />}
-              onClick={handlePrint}
-            >
-              In / Lưu PDF
-            </Button>
-            <Button
               variant="primary"
               size="sm"
               icon={<Download className="h-3.5 w-3.5" />}
+              onClick={handleDownloadPdf}
+            >
+              Tải CV (PDF)
+            </Button>
+            <Button
+              variant="outline"
+              size="sm"
+              icon={<FileText className="h-3.5 w-3.5" />}
               onClick={handleDownload}
             >
               Tải CV (.md)
