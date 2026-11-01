@@ -7,9 +7,11 @@ export interface Project {
   description: string
   category: 'frontend' | 'backend' | 'fullstack'
   featured: boolean
-  image: string
+  image?: string
   tags: string[]
   githubUrl: string
+  githubClientUrl?: string
+  githubServerUrl?: string
   liveUrl?: string
   highlights: string[]
   architectureDetails?: string

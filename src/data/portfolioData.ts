@@ -65,90 +65,76 @@ export const candidateData: CandidateInfo = {
 
 export const projectsData: Project[] = [
   {
-    id: 'vision-ai-system',
-    title: 'VisionAI — Nền tảng Phân tích & Nhận diện Hình ảnh Trực tuyến',
-    tagline: 'Ứng dụng web nhận diện đối tượng và xử lý ảnh số thời gian thực',
-    description: 'Hệ thống full-stack cho phép người dùng tải lên hình ảnh/video, áp dụng các thuật toán Thị giác máy tính (Computer Vision) để phát hiện vật thể, trích xuất đặc trưng và trực quan hóa kết quả phân tích.',
+    id: 'manage-library-system',
+    title: 'Hệ thống Quản lý Thư viện',
+    tagline: 'Quản lý lưu hành sách, mượn trả tự động & tra cứu trực tuyến',
+    description: 'Hệ thống Full-Stack hỗ trợ quản lý toàn diện thư viện số: danh mục sách, quản lý độc giả, lập phiếu mượn/trả, tự động hóa rà soát hạn mượn và gửi email nhắc nhở qua background job. Tích hợp xác thực đa phương thức và tài liệu hóa chuẩn OpenAPI/Swagger.',
     category: 'fullstack',
     featured: true,
-    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop',
-    tags: ['React 19', 'TypeScript', 'Python', 'FastAPI', 'OpenCV', 'PyTorch', 'Tailwind CSS'],
-    githubUrl: 'https://github.com/lnanh952005',
-    liveUrl: 'https://github.com/lnanh952005',
-    highlights: [
-      'Xây dựng pipeline tiền xử lý ảnh và suy luận mô hình phát hiện đối tượng với OpenCV và PyTorch',
-      'Thiết kế REST API bất đồng bộ hiệu năng cao bằng FastAPI phục vụ tải ảnh và trả về kết quả suy luận',
-      'Giao diện web trực quan bằng React 19 hiển thị bounding box và thông số nhận diện theo thời gian thực',
-      'Tối ưu hóa thời gian xử lý ảnh đạt tốc độ khung hình ổn định'
+    tags: [
+      'Vue 3',
+      'TypeScript',
+      'Node.js',
+      'Express',
+      'MongoDB',
+      'Mongoose',
+      'Pinia',
+      'Tailwind CSS',
+      'Ant Design',
+      'Zod',
+      'Swagger',
+      'Node-cron'
     ],
-    architectureDetails: 'Kiến trúc gồm frontend React 19 gửi yêu cầu qua REST/WebSocket tới backend FastAPI, nơi các tác vụ xử lý ảnh và suy luận mô hình Computer Vision được thực thi bất đồng bộ trên nền tảng Python.',
+    githubUrl: 'https://github.com/lnanh952005/Manage-Library-Server',
+    githubServerUrl: 'https://github.com/lnanh952005/Manage-Library-Server',
+    githubClientUrl: 'https://github.com/lnanh952005/Manage-Library-Client',
+    highlights: [
+      'Xây dựng kiến trúc RESTful API với Express & TypeScript, kiểm thực dữ liệu runtime bằng Zod và tài liệu hóa tự động qua Swagger OpenAPI',
+      'Thiết kế cơ sở dữ liệu MongoDB/Mongoose quản lý quan hệ sách, độc giả, lịch sử mượn trả và trạng thái lưu hành',
+      'Thiết lập tác vụ chạy nền định kỳ với Node-cron và Nodemailer để tự động rà soát hạn mượn và gửi email thông báo',
+      'Giao diện người dùng hiện đại bằng Vue 3, Pinia và Ant Design Vue, tối ưu truy vấn dữ liệu với TanStack Vue Query'
+    ],
+    architectureDetails: 'Kiến trúc phân tầng gồm Frontend (Vue 3, Pinia, TanStack Query) giao tiếp với Backend REST API (Node.js/Express, TypeScript). Tích hợp cơ chế xác thực JWT & Google OAuth 2.0 (Passport), kiểm thực dữ liệu runtime bằng Zod, hàng đợi tác vụ nền với Node-cron quản lý mượn trả tự động.',
     stats: [
-      { label: 'Độ chính xác mô hình', value: '92%+' },
-      { label: 'Thời gian suy luận', value: '<80ms' },
-      { label: 'Lớp đối tượng', value: '80 classes' }
+      { label: 'Backend API', value: 'Express + Zod' },
+      { label: 'Tự động hóa', value: 'Cron & Email' },
+      { label: 'Cơ sở dữ liệu', value: 'MongoDB' }
     ]
   },
   {
-    id: 'nlp-smart-assistant',
-    title: 'SmartNLP — Trợ lý Tóm tắt & Phân tích Văn bản Tự động',
-    tagline: 'Xử lý ngôn ngữ tự nhiên, phân loại sắc thái và tóm tắt văn bản thông minh',
-    description: 'Ứng dụng xử lý ngôn ngữ tự nhiên hỗ trợ trích xuất thực thể (NER), tóm tắt văn bản dài và phân tích cảm xúc (Sentiment Analysis) văn bản tiếng Việt phục vụ xử lý tài liệu tự động.',
-    category: 'backend',
-    featured: false,
-    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1000&auto=format&fit=crop',
-    tags: ['Python', 'NLP', 'FastAPI', 'Transformers', 'HuggingFace', 'Docker'],
-    githubUrl: 'https://github.com/lnanh952005',
-    liveUrl: 'https://github.com/lnanh952005',
-    highlights: [
-      'Tích hợp các mô hình Transformer mã nguồn mở cho bài toán trích xuất thực thể và tóm tắt tóm lược văn bản',
-      'Xây dựng pipeline chuẩn hóa và tiền xử lý dữ liệu văn bản tiếng Việt',
-      'Đóng gói API và mô hình vào Docker container độc lập, dễ dàng mở rộng và triển khai'
-    ],
-    stats: [
-      { label: 'Độ dài văn bản xử lý', value: '10k+ từ' },
-      { label: 'Độ trễ API', value: '<120ms' }
-    ]
-  },
-  {
-    id: 'ctu-student-portal',
-    title: 'CTU Document Hub — Nền tảng Chia sẻ Tài liệu Học tập Sinh viên',
-    tagline: 'Cổng lưu trữ tài liệu, đề cương và trao đổi học thuật cho sinh viên Đại học Cần Thơ',
-    description: 'Hệ thống web hỗ trợ sinh viên tìm kiếm giáo trình, chia sẻ tài liệu ôn thi và thảo luận môn học theo từng chuyên ngành với giao diện thân thiện và cơ chế phân quyền bảo mật.',
+    id: 'order-beverage-system',
+    title: 'Hệ thống Đặt Đồ ăn & Đồ uống',
+    tagline: 'Đặt món trực tuyến, tích hợp cổng thanh toán VNPay & quản trị đơn hàng',
+    description: 'Nền tảng đặt món trực tuyến hoàn chỉnh hỗ trợ duyệt thực đơn đa dạng, tùy chọn món/topping theo sở thích, giỏ hàng thời gian thực và tích hợp cổng thanh toán trực tuyến an toàn qua VNPay. Đi kèm trang quản trị theo dõi đơn hàng và biểu đồ thống kê doanh thu.',
     category: 'fullstack',
     featured: false,
-    image: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1000&auto=format&fit=crop',
-    tags: ['React 19', 'TypeScript', 'Node.js', 'Express', 'PostgreSQL', 'Tailwind CSS'],
-    githubUrl: 'https://github.com/lnanh952005',
-    liveUrl: 'https://github.com/lnanh952005',
-    highlights: [
-      'Thiết kế cơ sở dữ liệu quan hệ PostgreSQL với các ràng buộc khóa ngoại và index tối ưu hóa tìm kiếm',
-      'Cơ chế xác thực phân quyền JWT và bảo vệ phiên làm việc an toàn',
-      'Giao diện web thích ứng cao trên cả thiết bị di động và máy tính để bàn'
+    tags: [
+      'React',
+      'TypeScript',
+      'Node.js',
+      'Express',
+      'Prisma ORM',
+      'MariaDB',
+      'VNPay Gateway',
+      'Zustand',
+      'Tailwind CSS',
+      'Radix UI',
+      'Recharts'
     ],
-    stats: [
-      { label: 'Tài liệu quản lý', value: '300+' },
-      { label: 'Thời gian phản hồi', value: '<50ms' }
-    ]
-  },
-  {
-    id: 'task-queue-worker',
-    title: 'Distributed Task Processor — Bộ Xử lý Tác vụ Hàng đợi Nền',
-    tagline: 'Hệ thống hàng đợi nền thông lượng cao hỗ trợ xử lý tác vụ bất đồng bộ',
-    description: 'Bộ xử lý tác vụ nền cho các tác vụ tốn thời gian (xử lý hình ảnh, tổng hợp báo cáo), hỗ trợ tự động thử lại khi lỗi và bảng điều khiển theo dõi trạng thái tác vụ.',
-    category: 'backend',
-    featured: false,
-    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1000&auto=format&fit=crop',
-    tags: ['Python', 'Node.js', 'Redis', 'Docker', 'REST API'],
-    githubUrl: 'https://github.com/lnanh952005',
-    liveUrl: 'https://github.com/lnanh952005',
+    githubUrl: 'https://github.com/lnanh952005/order-beverage-be',
+    githubServerUrl: 'https://github.com/lnanh952005/order-beverage-be',
+    githubClientUrl: 'https://github.com/lnanh952005/order-beverage-fe',
     highlights: [
-      'Tận dụng Redis in-memory làm hàng đợi tin nhắn với khả năng điều tiết lưu lượng',
-      'Cơ chế retry lũy thừa (exponential backoff) giúp hệ thống hoạt động ổn định',
-      'Tách biệt logic xử lý giúp ứng dụng chính phản hồi tức thì cho người dùng'
+      'Tích hợp cổng thanh toán trực tuyến VNPay với chữ ký bảo mật SHA-256 và cơ chế xử lý webhook xác thực giao dịch an toàn',
+      'Sử dụng Prisma ORM kết nối cơ sở dữ liệu quan hệ MariaDB, đảm bảo tính toàn vẹn dữ liệu đơn hàng và giao dịch',
+      'Xây dựng giao diện đặt món mượt mà với React, TypeScript, Radix UI, quản lý state giỏ hàng tức thì bằng Zustand',
+      'Tích hợp Cloudinary lưu trữ và tối ưu hóa hình ảnh món ăn, cùng bảng dashboard thống kê doanh thu trực quan bằng Recharts'
     ],
+    architectureDetails: 'Hệ thống Client-Server hiện đại: Frontend React + TanStack Query đồng bộ trạng thái đơn hàng; Backend Express + TypeScript sử dụng Prisma ORM truy vấn MariaDB. Tích hợp thanh toán an toàn qua cổng VNPay, xác thực Google OAuth & JWT, kiểm soát lưu lượng với rate-limiting và ghi log hiệu năng với Pino.',
     stats: [
-      { label: 'Tác vụ / giây', value: '5k+ jobs/s' },
-      { label: 'Độ tin cậy', value: '99.9%' }
+      { label: 'Thanh toán', value: 'VNPay Gateway' },
+      { label: 'ORM & DB', value: 'Prisma + MariaDB' },
+      { label: 'Quản lý state', value: 'Zustand + React' }
     ]
   }
 ]
