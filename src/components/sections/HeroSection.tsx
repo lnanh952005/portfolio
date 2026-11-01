@@ -98,15 +98,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCvModal }) => {
           >
             <div className="flex flex-col items-center text-center py-2">
               {/* Profile Image & Avatar with subtle border */}
-              <div className="relative mb-4 group cursor-pointer" onClick={scrollToAbout}>
-                <div className="h-28 w-28 sm:h-32 sm:w-32 rounded-3xl overflow-hidden border-2 border-zinc-200/80 dark:border-zinc-700 shadow-md bg-neutral-100 dark:bg-zinc-800 transition-transform duration-300 group-hover:scale-105">
+              <div className="group/avatar relative mb-4 cursor-pointer" onClick={scrollToAbout}>
+                <div className="h-28 w-28 sm:h-32 sm:w-32 rounded-3xl overflow-hidden border-2 border-zinc-200/80 dark:border-zinc-700 shadow-md bg-neutral-100 dark:bg-zinc-800 [isolation:isolate] transform-gpu">
                   <img
                     src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop"
                     alt={candidateData.name}
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover transition-all duration-300 ease-out group-hover/avatar:scale-105"
                   />
                 </div>
-                <div className="absolute -bottom-2 -right-2 bg-blue-600 text-white p-2 rounded-2xl shadow-sm border-2 border-white dark:border-zinc-900">
+                <div className="absolute -bottom-2 -right-2 bg-blue-600 text-white p-2 rounded-2xl shadow-sm border-2 border-white dark:border-zinc-900 transition-transform duration-300 group-hover/avatar:scale-105">
                   <Terminal className="h-4 w-4" />
                 </div>
               </div>
