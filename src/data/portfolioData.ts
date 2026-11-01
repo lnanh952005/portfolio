@@ -71,6 +71,7 @@ export const projectsData: Project[] = [
     description: 'Hệ thống Full-Stack hỗ trợ quản lý toàn diện thư viện số: danh mục sách, quản lý độc giả, lập phiếu mượn/trả, tự động hóa rà soát hạn mượn và gửi email nhắc nhở qua background job. Tích hợp xác thực đa phương thức và tài liệu hóa chuẩn OpenAPI/Swagger.',
     category: 'fullstack',
     featured: true,
+    image: 'https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1000&auto=format&fit=crop',
     tags: [
       'Vue 3',
       'TypeScript',
@@ -108,6 +109,7 @@ export const projectsData: Project[] = [
     description: 'Nền tảng đặt món trực tuyến hoàn chỉnh hỗ trợ duyệt thực đơn đa dạng, tùy chọn món/topping theo sở thích, giỏ hàng thời gian thực và tích hợp cổng thanh toán trực tuyến an toàn qua VNPay. Đi kèm trang quản trị theo dõi đơn hàng và biểu đồ thống kê doanh thu.',
     category: 'fullstack',
     featured: false,
+    image: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D',
     tags: [
       'React',
       'TypeScript',

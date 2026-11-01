@@ -34,12 +34,24 @@ export const ProjectsSection: React.FC = () => {
               <div className="group flex flex-col justify-between w-full overflow-hidden rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200/90 dark:border-zinc-800 shadow-[0_2px_12px_rgba(0,0,0,0.03)] dark:shadow-[0_2px_12px_rgba(0,0,0,0.25)] hover:shadow-[0_16px_36px_rgba(0,0,0,0.06)] dark:hover:shadow-[0_16px_36px_rgba(0,0,0,0.4)] hover:-translate-y-1 transition-all duration-300">
                 
                 <div>
-                  {/* Bento Tech Header Banner */}
-                  <div className="p-5 sm:p-6 pb-4 bg-gradient-to-br from-zinc-50 via-zinc-100/70 to-zinc-50 dark:from-zinc-850 dark:via-zinc-800/80 dark:to-zinc-850 border-b border-zinc-100 dark:border-zinc-800 flex items-center justify-between gap-3">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950/50 text-blue-700 dark:text-blue-300 border border-blue-200/60 dark:border-blue-800/60 text-xs font-bold uppercase tracking-wider">
-                      <Layers className="h-3.5 w-3.5" />
-                      {project.category}
-                    </span>
+                  {/* Thumbnail Image Container */}
+                  <div className="relative h-48 w-full overflow-hidden bg-zinc-100 dark:bg-zinc-800 border-b border-zinc-100 dark:border-zinc-800 [isolation:isolate]">
+                    {project.image ? (
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    ) : (
+                      <div className="h-full w-full bg-gradient-to-br from-zinc-50 via-zinc-100/70 to-zinc-50 dark:from-zinc-850 dark:via-zinc-800/80 dark:to-zinc-850" />
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/50 via-transparent to-transparent pointer-events-none" />
+                    <div className="absolute top-3 left-3">
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/90 dark:bg-zinc-900/90 backdrop-blur-xs text-blue-700 dark:text-blue-300 border border-zinc-200/80 dark:border-zinc-700/80 text-xs font-bold uppercase tracking-wider shadow-2xs">
+                        <Layers className="h-3.5 w-3.5" />
+                        {project.category}
+                      </span>
+                    </div>
                   </div>
 
                   {/* Body Content */}
@@ -155,6 +167,16 @@ export const ProjectsSection: React.FC = () => {
           maxWidth="2xl"
         >
           <div className="space-y-5 text-sm text-neutral-700 dark:text-zinc-300">
+            {selectedProject.image && (
+              <div className="rounded-2xl overflow-hidden h-52 w-full bg-zinc-100 dark:bg-zinc-800 border border-zinc-200/70 dark:border-zinc-800 shadow-xs">
+                <img
+                  src={selectedProject.image}
+                  alt={selectedProject.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            )}
+
             {/* Header Tagline & Stats */}
             <div className="flex flex-wrap items-center justify-between gap-3 p-4 rounded-2xl bg-zinc-50 dark:bg-zinc-800/60 border border-zinc-200/80 dark:border-zinc-700/80">
               <span className="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">
