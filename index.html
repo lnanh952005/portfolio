@@ -1,10 +1,25 @@
 <!doctype html>
-<html lang="vi" class="scroll-smooth">
+<html lang="vi" class="scroll-smooth bg-[#FAFAFA] dark:bg-[#09090b]">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%232563EB'/><text x='50' y='64' font-size='48' font-weight='700' fill='white' text-anchor='middle' font-family='sans-serif'>A</text></svg>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
+    <!-- Script chặn flash sáng khi tải/F5 trang ở chế độ tối (Prevent FOUC) -->
+    <script>
+      (function() {
+        try {
+          const stored = localStorage.getItem('theme');
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (stored === 'dark' || (!stored && prefersDark)) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (_) {}
+      })();
+    </script>
+
     <!-- SEO & Metadata -->
     <title>Alex Nguyễn — Kỹ sư Phần mềm & Lập trình viên | Portfolio</title>
     <meta name="description" content="Portfolio của Alex Nguyễn, sinh viên năm 3 ngành Khoa học Máy tính tìm kiếm cơ hội thực tập Kỹ sư Phần mềm (Software Engineer, Backend, Frontend)." />
