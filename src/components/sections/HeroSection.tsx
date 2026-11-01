@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { ArrowDown, FileDown, Mail, MapPin, Terminal, CheckCircle2 } from 'lucide-react'
 import { BentoCard } from '../ui/BentoCard'
@@ -10,7 +10,44 @@ interface HeroSectionProps {
   onOpenCvModal: () => void
 }
 
+const FULL_TEXT = 'Xin chào, mình là Nhật Anh.'
+
 export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCvModal }) => {
+  const [displayedText, setDisplayedText] = useState('')
+  const [isDeleting, setIsDeleting] = useState(false)
+
+  useEffect(() => {
+    let timer: ReturnType<typeof setTimeout>
+
+    if (!isDeleting && displayedText === FULL_TEXT) {
+      // Dừng lại sau khi gõ xong
+      timer = setTimeout(() => {
+        setIsDeleting(true)
+      }, 2800)
+    } else if (isDeleting && displayedText === '') {
+      // Nghỉ ngắn trước khi bắt đầu chu kỳ mới
+      timer = setTimeout(() => {
+        setIsDeleting(false)
+      }, 300)
+    } else if (isDeleting) {
+      // Xóa lùi nhanh
+      timer = setTimeout(() => {
+        setDisplayedText((prev) => prev.slice(0, -1))
+      }, 20)
+    } else {
+      // Gõ từng ký tự mượt mà
+      timer = setTimeout(() => {
+        setDisplayedText((prev) => FULL_TEXT.slice(0, prev.length + 1))
+      }, 50)
+    }
+
+    return () => clearTimeout(timer)
+  }, [displayedText, isDeleting])
+
+  const prefix = displayedText.slice(0, 18)
+  const name = displayedText.length > 18 ? displayedText.slice(18, 26) : ''
+  const dot = displayedText.length > 26 ? displayedText.slice(26, 27) : ''
+
   const scrollToProjects = () => {
     document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })
   }
@@ -23,7 +60,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCvModal }) => {
     <section id="hero" className="pt-28 pb-12 sm:pt-36 sm:pb-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Bento Hero Grid */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-5 sm:gap-6">
-        
+
         {/* Main Welcome Hero Bento Card (Spans 8 columns on md/lg) */}
         <motion.div
           initial={{ opacity: 0, y: 18 }}
@@ -36,9 +73,26 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCvModal }) => {
             className="w-full justify-between"
           >
             <div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-neutral-900 dark:text-white leading-[1.15]">
-                Chào bạn, mình là <span className="text-neutral-900 dark:text-white">Nhật Anh</span>
-                <span className="text-blue-600">.</span>
+              <h1
+                aria-label="Xin chào, mình là Nhật Anh."
+                className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-neutral-900 dark:text-white leading-[1.15] relative"
+              >
+                {/* Giữ chỗ vô hình để cố định khung & chống giật layout */}
+                <span className="invisible select-none" aria-hidden="true">
+                  Xin chào, mình là <span className="text-neutral-900 dark:text-white">Nhật Anh</span>
+                  <span className="text-blue-600">.</span>
+                </span>
+
+                {/* Chữ hiển thị hiệu ứng typewriter */}
+                <span className="absolute left-0 top-0 w-full">
+                  <span>{prefix}</span>
+                  {name && <span className="text-neutral-900 dark:text-white">{name}</span>}
+                  {dot && <span className="text-blue-600">{dot}</span>}
+                  <span
+                    className="inline-block w-[3px] h-[0.88em] bg-blue-600 dark:bg-blue-500 ml-1.5 translate-y-[2px] animate-pulse"
+                    aria-hidden="true"
+                  />
+                </span>
               </h1>
 
               <p className="mt-3 text-lg sm:text-xl font-medium text-neutral-800 dark:text-zinc-200">
