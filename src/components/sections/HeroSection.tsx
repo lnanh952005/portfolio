@@ -238,22 +238,17 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenCvModal }) => {
                 <LinkedinIcon className="h-4 w-4 text-blue-600" />
                 <span>LinkedIn</span>
               </a>
-              <a
-                href={`mailto:${candidateData.contacts.email}`}
-                className="flex items-center gap-2 px-3 py-2.5 rounded-xl bg-zinc-50 dark:bg-zinc-800/60 hover:bg-zinc-100 dark:hover:bg-zinc-800 border border-zinc-200/80 dark:border-zinc-700/80 text-xs font-medium text-neutral-800 dark:text-zinc-200 transition-colors"
+              <button
+                type="button"
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                className="col-span-2 flex items-center justify-between px-3 py-2.5 rounded-xl bg-zinc-50 dark:bg-zinc-800/60 hover:bg-zinc-100 dark:hover:bg-zinc-800 border border-zinc-200/80 dark:border-zinc-700/80 text-xs font-medium text-neutral-800 dark:text-zinc-200 transition-colors cursor-pointer text-left"
               >
-                <Mail className="h-4 w-4 text-neutral-600 dark:text-zinc-400" />
-                <span>Email</span>
-              </a>
-              <a
-                href={candidateData.contacts.leetcode || '#'}
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-2 px-3 py-2.5 rounded-xl bg-zinc-50 dark:bg-zinc-800/60 hover:bg-zinc-100 dark:hover:bg-zinc-800 border border-zinc-200/80 dark:border-zinc-700/80 text-xs font-medium text-neutral-800 dark:text-zinc-200 transition-colors"
-              >
-                <Terminal className="h-4 w-4 text-amber-600 dark:text-amber-500" />
-                <span>LeetCode</span>
-              </a>
+                <div className="flex items-center gap-2 truncate">
+                  <Mail className="h-4 w-4 text-neutral-600 dark:text-zinc-400 shrink-0" />
+                  <span className="truncate">{candidateData.contacts.email}</span>
+                </div>
+                <span className="text-[11px] font-semibold text-blue-600 dark:text-blue-400 shrink-0 ml-2">Liên hệ ↓</span>
+              </button>
             </div>
           </BentoCard>
         </motion.div>
