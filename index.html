@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="vi" class="scroll-smooth bg-[#FAFAFA] dark:bg-[#09090b]">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%232563EB'/><text x='50' y='64' font-size='44' font-weight='700' fill='white' text-anchor='middle' font-family='sans-serif'>NA</text></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Script chặn flash sáng khi tải/F5 trang ở chế độ tối (Prevent FOUC) -->
+    <script>
+      (function() {
+        try {
+          const stored = localStorage.getItem('theme');
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (stored === 'dark' || (!stored && prefersDark)) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (_) {}
+      })();
+    </script>
+
+    <!-- SEO & Metadata -->
+    <title>Lê Nhật Anh — Khoa học Máy tính | Đại học Cần Thơ</title>
+    <meta name="description" content="Portfolio của Lê Nhật Anh, sinh viên ngành Khoa học Máy tính tại Đại học Cần Thơ. Đam mê phát triển Web, Thị giác máy tính (Computer Vision) và Xử lý ngôn ngữ tự nhiên (NLP)." />
+    <meta name="keywords" content="Lê Nhật Anh, Đại học Cần Thơ, Khoa học máy tính, Web Developer, Computer Vision, NLP, React, Python, FastAPI" />
+    <meta name="author" content="Lê Nhật Anh" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Lê Nhật Anh — Portfolio Kỹ sư Phần mềm & AI" />
+    <meta property="og:description" content="Portfolio của Lê Nhật Anh, sinh viên ngành Khoa học Máy tính tại Đại học Cần Thơ." />
+    <meta property="og:type" content="website" />
+
+    <!-- Google Fonts: Inter and JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <script type="module" crossorigin src="/assets/index-C10W0YN-.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CMJfVc76.css">
+  </head>
+  <body class="bg-[#FAFAFA] dark:bg-[#09090b] text-[#171717] dark:text-[#f4f4f5] antialiased selection:bg-blue-100 dark:selection:bg-blue-900 selection:text-blue-900 dark:selection:text-blue-100 min-h-screen">
+    <div id="root"></div>
+  </body>
+</html>
